@@ -65,6 +65,7 @@ class ContactListVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     @IBAction func doneButtonAction(_ sender: UIBarButtonItem) {
         print("send selected items to global array")
+        print("you selected \(arrPhoneNumbers)")
     }
     
     
@@ -101,6 +102,7 @@ class ContactListVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     }
     
     func searchMethod(searchText: String){
+        //search inside search bar
         filteredContacts.removeAll()
         searchIndexes.removeAll()
         if(searchText.isEmpty){
