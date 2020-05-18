@@ -28,26 +28,17 @@ class ContactListVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.delegate = self
         tableView.dataSource = self
         self.title = "Select Contacts"
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
         self.tableView.register(UINib(nibName: "ContactCell", bundle: nil), forCellReuseIdentifier: "ContactCell")
-        
         let contacts = PhoneContacts.getContacts()
-        
         print(contacts)
-        
         for item in contacts {
-            
             arrPhoneNumbers.append(MyCNContact(name_: item.name!, phoneNumber_: item.phoneNumber!))
-            
         }
-        
         tableView.reloadData()
-        
-        
         searchController.searchBar.placeholder = "Search Contacts"
         searchController.searchResultsUpdater = self
         searchController.hidesNavigationBarDuringPresentation = false
@@ -55,20 +46,16 @@ class ContactListVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         self.definesPresentationContext = true
         searchController.delegate = self
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
-        
         if #available(iOS 11.0, *) {
             navigationItem.searchController = searchController
         }
         
     }
 
-    
     @IBAction func doneButtonAction(_ sender: UIBarButtonItem) {
         print("send selected items to global array")
         print("you selected \(arrPhoneNumbers)")
     }
-    
-    
     
     func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
         filterContentForSearchText(searchBar.text!)
@@ -80,50 +67,39 @@ class ContactListVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
             $0.name!.localizedCaseInsensitiveContains(searchText)
         })
         filteredContacts = array
-        
         self.tableView.reloadData()
     }
-    
     
     func updateSearchResults(for searchController: UISearchController) {
         print("update search results")
         searchMethod(searchText: searchController.searchBar.text!)
-        
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print("text did change")
         searchMethod(searchText: searchText)
     }
-    
-    
+
     func setupContacts(){
         self.tableView.reloadData()
     }
     
     func searchMethod(searchText: String){
-        //search inside search bar
         filteredContacts.removeAll()
         searchIndexes.removeAll()
         if(searchText.isEmpty){
             searched = false
             self.setupContacts()
             return
-        }else if(searchController.isActive && !(searchText.isEmpty)){
-            filteredContacts = arrPhoneNumbers.filter({ (contact : MyCNContact) -> Bool in
-                
-                return (contact.name!.lowercased().contains(searchText.lowercased()))
-                
-            })
-            searched = true
-            self.setupContacts()
         }
+        filteredContacts = arrPhoneNumbers.filter({ (contact : MyCNContact) -> Bool in
+            return (contact.name!.lowercased().contains(searchText.lowercased()))
+        })
+        searched = true
+        self.setupContacts()
     }
     
-    
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         if (searched) {
             return filteredContacts.count
         }else
@@ -133,41 +109,29 @@ class ContactListVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         if (searched) {
             let cell: ContactCell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath) as! ContactCell
-            
             cell.contactName?.text = filteredContacts[indexPath.row].name
             cell.contactNumber?.text = filteredContacts[indexPath.row].phoneNumber?.stringValue
-            
             return cell
         }else {
             let cell: ContactCell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath) as! ContactCell
-            
             cell.contactName?.text = arrPhoneNumbers[indexPath.row].name
             cell.contactNumber?.text = arrPhoneNumbers[indexPath.row].phoneNumber?.stringValue
-            
             return cell
         }
     }
     
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         if (searched) {
             let myContacts: MyCNContact = self.arrPhoneNumbers[indexPath.row]
-            
             //add selected contact
             selectedContacts.append(myContacts)
-            
             print(selectedContacts)
-            
         }else {
             let myContacts: MyCNContact = self.arrPhoneNumbers[indexPath.row]
-            
             //add selected contact
             selectedContacts.append(myContacts)
-            
             print(selectedContacts)
         }
     }
@@ -175,19 +139,14 @@ class ContactListVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         if (searched) {
             let myContacts: MyCNContact = self.arrPhoneNumbers[indexPath.row]
-            
             //remove deselected contact
             selectedContacts.removeAll{$0 == myContacts}
-            
             print(selectedContacts)
         }else {
             let myContacts: MyCNContact = self.arrPhoneNumbers[indexPath.row]
-            
             //remove deselected contact
             selectedContacts.removeAll{$0 == myContacts}
-            
             print(selectedContacts)
         }
     }
-
 }
