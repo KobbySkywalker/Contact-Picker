@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Sora-Light.ttf">
+            <string>Sora-Light</string>
+        </array>
+        <array key="Sora-Regular.ttf">
+            <string>Sora-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="69" id="EFH-xj-Uu7" customClass="RegularCell" customModule="Chango_v2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EFH-xj-Uu7" id="Phc-Cz-96U">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaulticon" translatesAutoresizingMaskIntoConstraints="NO" id="vQd-dL-KSm">
+                        <rect key="frame" x="9" y="12" width="45" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="45" id="WCE-UD-ntM"/>
+                            <constraint firstAttribute="height" constant="45" id="vzO-Y3-6Yu"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24R-Sr-EYH">
+                        <rect key="frame" x="73" y="12" width="215" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="WMm-Z9-UY4"/>
+                            <constraint firstAttribute="width" constant="215" id="Xr7-Kf-ac6"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Sora-Regular" family="Sora" pointSize="18"/>
+                        <color key="textColor" red="0.03893644735" green="0.19578543309999999" blue="0.37017834189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3v-Uc-yxT">
+                        <rect key="frame" x="73" y="38" width="215" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="qAo-KB-sRu"/>
+                            <constraint firstAttribute="width" constant="215" id="v3p-2s-KY3"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Sora-Light" family="Sora" pointSize="12"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfj-jc-h08">
+                        <rect key="frame" x="289" y="27" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="15" id="QMK-HH-qOY"/>
+                            <constraint firstAttribute="height" constant="15" id="vCo-5h-uSN"/>
+                        </constraints>
+                        <state key="normal" image="remove"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="vQd-dL-KSm" firstAttribute="centerY" secondItem="Phc-Cz-96U" secondAttribute="centerY" id="79R-g8-4FY"/>
+                    <constraint firstItem="wfj-jc-h08" firstAttribute="centerY" secondItem="Phc-Cz-96U" secondAttribute="centerY" id="CKv-e4-wvN"/>
+                    <constraint firstAttribute="trailing" secondItem="wfj-jc-h08" secondAttribute="trailing" constant="16" id="Ta2-X9-37o"/>
+                    <constraint firstItem="24R-Sr-EYH" firstAttribute="leading" secondItem="vQd-dL-KSm" secondAttribute="trailing" constant="19" id="VDP-Qj-hzp"/>
+                    <constraint firstItem="24R-Sr-EYH" firstAttribute="top" secondItem="vQd-dL-KSm" secondAttribute="top" id="Wvw-9R-Rg2"/>
+                    <constraint firstItem="x3v-Uc-yxT" firstAttribute="leading" secondItem="vQd-dL-KSm" secondAttribute="trailing" constant="19" id="cvR-KI-me6"/>
+                    <constraint firstAttribute="trailing" secondItem="24R-Sr-EYH" secondAttribute="trailing" constant="32" id="e10-rv-xuf"/>
+                    <constraint firstItem="vQd-dL-KSm" firstAttribute="leading" secondItem="Phc-Cz-96U" secondAttribute="leading" constant="9" id="g5R-VZ-tK7"/>
+                    <constraint firstItem="x3v-Uc-yxT" firstAttribute="bottom" secondItem="vQd-dL-KSm" secondAttribute="bottom" id="gGS-l0-Wep"/>
+                    <constraint firstItem="x3v-Uc-yxT" firstAttribute="top" secondItem="24R-Sr-EYH" secondAttribute="bottom" constant="1" id="pcc-Qp-RCR"/>
+                    <constraint firstItem="vQd-dL-KSm" firstAttribute="top" secondItem="Phc-Cz-96U" secondAttribute="top" constant="12" id="tCk-Du-6U6"/>
+                    <constraint firstAttribute="trailing" secondItem="x3v-Uc-yxT" secondAttribute="trailing" constant="32" id="wXV-Pe-qpZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="Cv8-nt-bSI"/>
+            <connections>
+                <outlet property="bottomValue" destination="x3v-Uc-yxT" id="Ht8-PG-fAU"/>
+                <outlet property="imageIcon" destination="vQd-dL-KSm" id="ENs-Ky-rJV"/>
+                <outlet property="removeButton" destination="wfj-jc-h08" id="SaZ-hi-6Kx"/>
+                <outlet property="topValue" destination="24R-Sr-EYH" id="83c-xc-Dco"/>
+            </connections>
+            <point key="canvasLocation" x="-42.028985507246382" y="202.56696428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="defaulticon" width="45" height="45"/>
+        <image name="remove" width="20" height="20"/>
+    </resources>
+</document>

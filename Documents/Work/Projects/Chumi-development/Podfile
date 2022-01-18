@@ -1,0 +1,37 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '11.0'
+use_frameworks!
+inhibit_all_warnings!
+
+target 'Chumi' do
+    pod 'Nuke'
+    pod 'IQKeyboardManagerSwift'
+    pod "KWVerificationCodeView"
+    pod 'Alamofire'
+    pod 'Firebase/Core'
+    pod 'Firebase/Messaging'
+    pod 'ESPullToRefresh'
+    pod 'FTIndicator'
+    pod 'DTPhotoViewerController'
+    pod 'SwiftLint'
+    pod 'SnapKit'
+    pod 'Locksmith'
+    pod 'AlamofireEasyLogger'
+    pod 'GoogleMaps'
+    pod 'GooglePlaces'
+
+    post_install do |pi|
+        pi.pods_project.targets.each do |t|
+          t.build_configurations.each do |config|
+            config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '11.0'
+          end
+        end
+    end
+
+		target 'ChumiTests' do
+        inherit! :search_paths
+        pod 'Firebase'
+    end
+end
+

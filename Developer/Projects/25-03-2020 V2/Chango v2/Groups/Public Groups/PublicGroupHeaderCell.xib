@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="234" id="KGk-i7-Jjw" customClass="PublicGroupHeaderCell" customModule="Chango_v2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="319" height="234"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="319" height="233.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campaign Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1G-j2-h4d">
+                        <rect key="frame" x="15" y="149" width="288" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="288" id="9c9-JF-6nI"/>
+                            <constraint firstAttribute="height" constant="26" id="o1a-4P-HOz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RiE-4P-4FS">
+                        <rect key="frame" x="15" y="177" width="289" height="49"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="49" id="6sq-sR-Abe"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J3X-2F-GVN" customClass="GradientView" customModule="Chango_v2" customModuleProvider="target">
+                        <rect key="frame" x="-1" y="0.0" width="320" height="155"/>
+                        <color key="backgroundColor" white="1" alpha="0.095301797950000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="155" id="Obn-bo-6St"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColorr">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pregnant" translatesAutoresizingMaskIntoConstraints="NO" id="ISb-OR-tYS">
+                        <rect key="frame" x="0.0" y="0.0" width="319" height="144"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="144" id="mfG-o6-dne"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="ISb-OR-tYS" secondAttribute="trailing" id="32P-qm-a5J"/>
+                    <constraint firstItem="J3X-2F-GVN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="8ai-aK-wlg"/>
+                    <constraint firstItem="ISb-OR-tYS" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="ARb-X0-VuQ"/>
+                    <constraint firstItem="d1G-j2-h4d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="HC4-n8-PY6"/>
+                    <constraint firstItem="RiE-4P-4FS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="IAO-H0-UZJ"/>
+                    <constraint firstItem="d1G-j2-h4d" firstAttribute="top" secondItem="ISb-OR-tYS" secondAttribute="bottom" constant="5" id="MZY-4v-PvH"/>
+                    <constraint firstItem="J3X-2F-GVN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="-1" id="Oeh-S0-Fzl"/>
+                    <constraint firstAttribute="trailing" secondItem="RiE-4P-4FS" secondAttribute="trailing" constant="15" id="SO2-9h-Gnl"/>
+                    <constraint firstItem="RiE-4P-4FS" firstAttribute="top" secondItem="d1G-j2-h4d" secondAttribute="bottom" constant="2" id="aDM-A4-EIp"/>
+                    <constraint firstItem="RiE-4P-4FS" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="b23-fc-rAl"/>
+                    <constraint firstItem="d1G-j2-h4d" firstAttribute="top" secondItem="ISb-OR-tYS" secondAttribute="bottom" constant="5" id="cxb-gb-edR"/>
+                    <constraint firstAttribute="trailing" secondItem="J3X-2F-GVN" secondAttribute="trailing" id="ght-Pi-BdR"/>
+                    <constraint firstItem="ISb-OR-tYS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="mCW-iA-YV9"/>
+                    <constraint firstItem="ISb-OR-tYS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="xwa-l1-lGF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="groupDescription" destination="RiE-4P-4FS" id="xz8-Ua-TKU"/>
+                <outlet property="groupImage" destination="ISb-OR-tYS" id="wVb-iD-T00"/>
+                <outlet property="groupName" destination="d1G-j2-h4d" id="nXb-sq-get"/>
+            </connections>
+            <point key="canvasLocation" x="-63.04347826086957" y="152.00892857142856"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="pregnant" width="5616" height="3744"/>
+    </resources>
+</document>

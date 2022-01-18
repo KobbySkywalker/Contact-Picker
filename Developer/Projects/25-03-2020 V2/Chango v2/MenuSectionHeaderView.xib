@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Sora-Light.ttf">
+            <string>Sora-Light</string>
+        </array>
+        <array key="Sora-Regular.ttf">
+            <string>Sora-Regular</string>
+        </array>
+        <array key="Sora-SemiBold.ttf">
+            <string>Sora-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="B9A-gt-S7W" customClass="MenuSectionHeaderView" customModule="Chango_v2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="66"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HWq-Yg-BxT">
+                    <rect key="frame" x="0.0" y="0.0" width="343" height="66"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropdownicons" translatesAutoresizingMaskIntoConstraints="NO" id="Kwg-a7-VZw">
+                    <rect key="frame" x="319" y="10" width="17" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="17" id="ONn-0o-O1J"/>
+                        <constraint firstAttribute="height" constant="23" id="bTW-AW-xm7"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Burger" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="06W-29-nYI">
+                    <rect key="frame" x="69" y="10" width="159" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="159" id="ZWg-0t-aI7"/>
+                        <constraint firstAttribute="height" constant="23" id="ooD-R9-Pml"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Sora-Regular" family="Sora" pointSize="18"/>
+                    <color key="textColor" red="0.019607843140000001" green="0.25098039220000001" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Burger" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzN-At-sWl">
+                    <rect key="frame" x="69" y="41" width="148" height="14"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="14" id="cbK-we-gXX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Sora-Light" family="Sora" pointSize="8"/>
+                    <color key="textColor" red="0.44705882349999998" green="0.44705882349999998" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Burger" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEa-7N-uZ9">
+                    <rect key="frame" x="232" y="10" width="82" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="4PB-Vj-Tsl"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Sora-SemiBold" family="Sora" pointSize="17"/>
+                    <color key="textColor" red="0.019607843140000001" green="0.25098039220000001" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="individual" translatesAutoresizingMaskIntoConstraints="NO" id="2JS-NK-dpp">
+                    <rect key="frame" x="8" y="10" width="45" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="45" id="Eb1-bQ-rxn"/>
+                        <constraint firstAttribute="height" constant="45" id="IQg-gr-z06"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="gzN-At-sWl" firstAttribute="trailing" secondItem="06W-29-nYI" secondAttribute="trailing" constant="-11" id="0Q9-Ma-SwH"/>
+                <constraint firstItem="PEa-7N-uZ9" firstAttribute="top" secondItem="06W-29-nYI" secondAttribute="top" id="2up-4c-9xi"/>
+                <constraint firstItem="06W-29-nYI" firstAttribute="top" secondItem="2JS-NK-dpp" secondAttribute="top" id="3vT-qt-00b"/>
+                <constraint firstItem="2JS-NK-dpp" firstAttribute="top" secondItem="B9A-gt-S7W" secondAttribute="top" constant="10" id="4DJ-Hh-iPd"/>
+                <constraint firstItem="gzN-At-sWl" firstAttribute="top" secondItem="PEa-7N-uZ9" secondAttribute="bottom" constant="9" id="9QG-zf-pSx"/>
+                <constraint firstItem="Kwg-a7-VZw" firstAttribute="leading" secondItem="PEa-7N-uZ9" secondAttribute="trailing" constant="5" id="A66-7M-h4c"/>
+                <constraint firstItem="gzN-At-sWl" firstAttribute="leading" secondItem="2JS-NK-dpp" secondAttribute="trailing" constant="16" id="HBG-ax-jGi"/>
+                <constraint firstItem="HWq-Yg-BxT" firstAttribute="leading" secondItem="B9A-gt-S7W" secondAttribute="leading" id="HdV-31-U5j"/>
+                <constraint firstItem="Kwg-a7-VZw" firstAttribute="top" secondItem="PEa-7N-uZ9" secondAttribute="top" id="J5o-Cz-wY5"/>
+                <constraint firstAttribute="trailing" secondItem="Kwg-a7-VZw" secondAttribute="trailing" constant="7" id="Md5-9W-zyu"/>
+                <constraint firstAttribute="trailing" secondItem="HWq-Yg-BxT" secondAttribute="trailing" id="OeQ-wa-T8g"/>
+                <constraint firstAttribute="bottom" secondItem="HWq-Yg-BxT" secondAttribute="bottom" id="Ogq-Gr-9IQ"/>
+                <constraint firstItem="2JS-NK-dpp" firstAttribute="leading" secondItem="B9A-gt-S7W" secondAttribute="leading" constant="8" id="QdU-uX-JOE"/>
+                <constraint firstItem="06W-29-nYI" firstAttribute="leading" secondItem="2JS-NK-dpp" secondAttribute="trailing" constant="16" id="UBZ-kx-OIa"/>
+                <constraint firstItem="gzN-At-sWl" firstAttribute="bottom" secondItem="2JS-NK-dpp" secondAttribute="bottom" id="YOb-Qd-fDi"/>
+                <constraint firstItem="PEa-7N-uZ9" firstAttribute="leading" secondItem="06W-29-nYI" secondAttribute="trailing" constant="4" id="YRg-d9-QO5"/>
+                <constraint firstItem="gzN-At-sWl" firstAttribute="top" secondItem="06W-29-nYI" secondAttribute="bottom" constant="8" id="bKP-Gq-Nv8"/>
+                <constraint firstItem="HWq-Yg-BxT" firstAttribute="top" secondItem="B9A-gt-S7W" secondAttribute="top" id="ope-SU-59Z"/>
+                <constraint firstItem="gzN-At-sWl" firstAttribute="leading" secondItem="06W-29-nYI" secondAttribute="leading" id="yif-Hv-bWw"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="amount" destination="PEa-7N-uZ9" id="9fE-KV-Hew"/>
+                <outlet property="arrowImageView" destination="Kwg-a7-VZw" id="AqY-90-61F"/>
+                <outlet property="backgroundViewColor" destination="HWq-Yg-BxT" id="jtI-17-91B"/>
+                <outlet property="destinationNumber" destination="gzN-At-sWl" id="hpE-tw-CFd"/>
+                <outlet property="img" destination="2JS-NK-dpp" id="Rno-ps-w0t"/>
+                <outlet property="sectionTitleLabel" destination="06W-29-nYI" id="4Fh-f9-lJx"/>
+            </connections>
+            <point key="canvasLocation" x="-1810.4000000000001" y="444.3778110944528"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="dropdownicons" width="13" height="13"/>
+        <image name="individual" width="100" height="100"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

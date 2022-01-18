@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="80" id="FjX-l7-y5S" customClass="CampaignViewCell" customModule="Chango_v2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FjX-l7-y5S" id="Zu3-Fv-fdW">
+                <rect key="frame" x="0.0" y="0.0" width="341" height="79.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demo" translatesAutoresizingMaskIntoConstraints="NO" id="Kta-hl-3eN">
+                        <rect key="frame" x="7" y="8" width="64" height="63.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="63.5" id="JUP-sE-nLz"/>
+                            <constraint firstAttribute="width" constant="64" id="kNS-uj-Lhd"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uca-X3-U6O">
+                        <rect key="frame" x="79" y="17" width="254" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="26" id="DO7-Kv-dQ1"/>
+                            <constraint firstAttribute="width" constant="254" id="l40-9N-Wzv"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                        <color key="textColor" red="0.03893644735" green="0.19578543309999999" blue="0.37017834189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asV-Lw-K9o">
+                        <rect key="frame" x="79" y="43" width="150" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="R2C-3T-Lyq"/>
+                            <constraint firstAttribute="height" constant="19" id="fka-CE-MA3"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.90000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="cg9-D2-Lc3">
+                        <rect key="frame" x="251" y="51" width="84" height="2"/>
+                        <color key="tintColor" red="0.20000000000000001" green="0.21176470589999999" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="84" id="5rX-RT-dkh"/>
+                            <constraint firstAttribute="height" constant="2" id="joR-4J-G0j"/>
+                        </constraints>
+                    </progressView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Kta-hl-3eN" firstAttribute="leading" secondItem="Zu3-Fv-fdW" secondAttribute="leadingMargin" constant="-9" id="2Pk-xY-hoA"/>
+                    <constraint firstItem="uca-X3-U6O" firstAttribute="leading" secondItem="Kta-hl-3eN" secondAttribute="trailing" constant="8" symbolic="YES" id="3gU-VM-WwJ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="cg9-D2-Lc3" secondAttribute="bottom" constant="16" id="Flw-Pz-KhE"/>
+                    <constraint firstItem="uca-X3-U6O" firstAttribute="leading" secondItem="asV-Lw-K9o" secondAttribute="leading" id="GCW-WV-lbb"/>
+                    <constraint firstItem="Kta-hl-3eN" firstAttribute="top" secondItem="Zu3-Fv-fdW" secondAttribute="topMargin" constant="-3" id="S34-bQ-Yz7"/>
+                    <constraint firstItem="cg9-D2-Lc3" firstAttribute="top" secondItem="uca-X3-U6O" secondAttribute="bottom" constant="8" symbolic="YES" id="a1e-VN-hmx"/>
+                    <constraint firstItem="uca-X3-U6O" firstAttribute="top" secondItem="Zu3-Fv-fdW" secondAttribute="topMargin" constant="6" id="cWX-o9-I9o"/>
+                    <constraint firstItem="Kta-hl-3eN" firstAttribute="centerY" secondItem="Zu3-Fv-fdW" secondAttribute="centerY" id="e6Z-O4-vVN"/>
+                    <constraint firstItem="uca-X3-U6O" firstAttribute="trailing" secondItem="Zu3-Fv-fdW" secondAttribute="trailingMargin" id="lTk-7e-ZNm"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="cg9-D2-Lc3" secondAttribute="trailing" constant="-2" id="mEJ-e7-7RQ"/>
+                    <constraint firstItem="asV-Lw-K9o" firstAttribute="top" secondItem="uca-X3-U6O" secondAttribute="bottom" id="q4f-Mg-4LW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <constraints>
+                <constraint firstItem="Vsc-Js-mnB" firstAttribute="trailing" secondItem="uca-X3-U6O" secondAttribute="trailing" constant="42" id="8oB-XE-R6U"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Vsc-Js-mnB"/>
+            <connections>
+                <outlet property="campaignImage" destination="Kta-hl-3eN" id="Mha-tk-6O9"/>
+                <outlet property="campaignName" destination="uca-X3-U6O" id="OpK-QE-Yi8"/>
+                <outlet property="date" destination="asV-Lw-K9o" id="zjg-QH-kgn"/>
+                <outlet property="progress" destination="cg9-D2-Lc3" id="dbZ-1U-hpc"/>
+            </connections>
+            <point key="canvasLocation" x="245.59999999999999" y="133.13343328335833"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="demo" width="96" height="96"/>
+    </resources>
+</document>

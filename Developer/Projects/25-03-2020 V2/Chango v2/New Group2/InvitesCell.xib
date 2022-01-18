@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Sora-Light.ttf">
+            <string>Sora-Light</string>
+        </array>
+        <array key="Sora-Regular.ttf">
+            <string>Sora-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="2Um-Lg-MeX" customClass="InvitesCell" customModule="Chango_v2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="2Um-Lg-MeX" id="hBv-H1-rY5">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultgroupicon" translatesAutoresizingMaskIntoConstraints="NO" id="YcS-1I-Erp">
+                        <rect key="frame" x="9" y="17" width="45" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="45" id="S34-8A-0gA"/>
+                            <constraint firstAttribute="height" constant="45" id="TIN-Wy-lKK"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="22.5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" systemColor="systemGray3Color"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="meX-vy-i2D">
+                        <rect key="frame" x="76" y="17" width="228" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="QP1-xl-qsi"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Sora-Regular" family="Sora" pointSize="16"/>
+                        <color key="textColor" red="0.019607843140000001" green="0.25098039220000001" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cCb-Oo-G1x">
+                        <rect key="frame" x="76" y="36" width="228" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="26" id="B6C-aq-AQ1"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Sora-Light" family="Sora" pointSize="12"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="meX-vy-i2D" firstAttribute="top" secondItem="YcS-1I-Erp" secondAttribute="top" id="4Jt-jA-z4K"/>
+                    <constraint firstItem="YcS-1I-Erp" firstAttribute="leading" secondItem="hBv-H1-rY5" secondAttribute="leadingMargin" constant="-6" id="52N-v5-heu"/>
+                    <constraint firstItem="cCb-Oo-G1x" firstAttribute="top" secondItem="meX-vy-i2D" secondAttribute="bottom" constant="3" id="6kW-fs-d7R"/>
+                    <constraint firstItem="YcS-1I-Erp" firstAttribute="centerY" secondItem="hBv-H1-rY5" secondAttribute="centerY" id="Kg2-tC-qUy"/>
+                    <constraint firstItem="YcS-1I-Erp" firstAttribute="top" secondItem="hBv-H1-rY5" secondAttribute="top" constant="17" id="NfN-cx-ogA"/>
+                    <constraint firstItem="YcS-1I-Erp" firstAttribute="top" secondItem="hBv-H1-rY5" secondAttribute="topMargin" constant="6" id="YEQ-0I-xSG"/>
+                    <constraint firstItem="cCb-Oo-G1x" firstAttribute="trailing" secondItem="meX-vy-i2D" secondAttribute="trailing" id="a0c-Lv-kRu"/>
+                    <constraint firstItem="cCb-Oo-G1x" firstAttribute="leading" secondItem="YcS-1I-Erp" secondAttribute="trailing" constant="22" id="fzn-CW-D5e"/>
+                    <constraint firstItem="meX-vy-i2D" firstAttribute="leading" secondItem="YcS-1I-Erp" secondAttribute="trailing" constant="22" id="gOh-ER-4xg"/>
+                    <constraint firstItem="meX-vy-i2D" firstAttribute="trailing" secondItem="hBv-H1-rY5" secondAttribute="trailingMargin" id="lcs-tm-O39"/>
+                    <constraint firstItem="YcS-1I-Erp" firstAttribute="leading" secondItem="hBv-H1-rY5" secondAttribute="leading" constant="9" id="w85-xw-gGI"/>
+                    <constraint firstItem="cCb-Oo-G1x" firstAttribute="bottom" secondItem="YcS-1I-Erp" secondAttribute="bottom" id="y3Q-gd-dww"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="TYy-5Z-kp5"/>
+            <connections>
+                <outlet property="groupImage" destination="YcS-1I-Erp" id="xV9-8c-bQz"/>
+                <outlet property="groupName" destination="meX-vy-i2D" id="BAE-Mn-zpT"/>
+                <outlet property="messageBody" destination="cCb-Oo-G1x" id="F3v-0l-wIV"/>
+            </connections>
+            <point key="canvasLocation" x="137.59999999999999" y="170.91454272863569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="defaultgroupicon" width="46" height="38.5"/>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

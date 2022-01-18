@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="311" id="KGk-i7-Jjw" customClass="CampaignsTableViewCell" customModule="Chango_v2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="358" height="311"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="358" height="310.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nrk-o7-t0H">
+                        <rect key="frame" x="0.0" y="13" width="358" height="298"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pregnant" translatesAutoresizingMaskIntoConstraints="NO" id="Gke-tD-e3Y">
+                                <rect key="frame" x="8" y="7" width="342" height="155"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="155" id="vf2-fg-IWl"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZg-Dc-9A9" customClass="GradientView" customModule="Chango_v2" customModuleProvider="target">
+                                <rect key="frame" x="8" y="7" width="342" height="155"/>
+                                <color key="backgroundColor" white="1" alpha="0.095301797950000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="155" id="51O-xO-yQt"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColorr">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help our friend Eddy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6W-l9-3vx">
+                                <rect key="frame" x="9" y="170" width="340" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="340" id="WG3-Mj-pQ4"/>
+                                    <constraint firstAttribute="height" constant="21" id="ePW-YF-e6Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Zk-Y8-d79">
+                                <rect key="frame" x="8" y="224" width="342" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="fnq-mf-6Ns"/>
+                                </constraints>
+                                <string key="text">I have received an overwhelming amount of support with this campaign... I have received an overwhelming amount of support with this campaign...</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GHS1,00 raised of GHS2,000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mwm-Pq-kKp">
+                                <rect key="frame" x="8" y="210" width="254" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="Ogj-rk-mMa"/>
+                                    <constraint firstAttribute="width" constant="254" id="mHQ-CZ-c0R"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="11"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1bh-PZ-5P9">
+                                <rect key="frame" x="8" y="202" width="342" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="ydJ-26-rpn"/>
+                                </constraints>
+                                <color key="progressTintColor" red="0.36168396470000003" green="0.61884868140000004" blue="0.3210426569" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="trackTintColor" red="0.64309251308441162" green="0.64701384305953979" blue="0.65096932649612427" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ends 100 weeks from now" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9re-zI-YaZ">
+                                <rect key="frame" x="175" y="271" width="173" height="13"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="173" id="6E1-Qo-zCH"/>
+                                    <constraint firstAttribute="height" constant="13" id="KUu-dk-qIA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="11"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Mwm-Pq-kKp" firstAttribute="top" secondItem="1bh-PZ-5P9" secondAttribute="bottom" constant="7" id="CYv-y7-Wi7"/>
+                            <constraint firstItem="Gke-tD-e3Y" firstAttribute="leading" secondItem="nrk-o7-t0H" secondAttribute="leading" constant="8" id="Fav-Im-ifc"/>
+                            <constraint firstAttribute="trailing" secondItem="1bh-PZ-5P9" secondAttribute="trailing" constant="8" id="H1b-ny-bpN"/>
+                            <constraint firstItem="V6W-l9-3vx" firstAttribute="top" secondItem="CZg-Dc-9A9" secondAttribute="bottom" constant="8" id="HHP-b9-q99"/>
+                            <constraint firstItem="CZg-Dc-9A9" firstAttribute="leading" secondItem="nrk-o7-t0H" secondAttribute="leading" constant="8" id="Hc2-cV-PeG"/>
+                            <constraint firstItem="V6W-l9-3vx" firstAttribute="centerX" secondItem="nrk-o7-t0H" secondAttribute="centerX" id="LjY-Y7-AHU"/>
+                            <constraint firstItem="6Zk-Y8-d79" firstAttribute="top" secondItem="Mwm-Pq-kKp" secondAttribute="bottom" constant="-3" id="LuI-M4-xyp"/>
+                            <constraint firstItem="Gke-tD-e3Y" firstAttribute="top" secondItem="nrk-o7-t0H" secondAttribute="top" constant="7" id="Shv-zf-1Sj"/>
+                            <constraint firstItem="6Zk-Y8-d79" firstAttribute="leading" secondItem="nrk-o7-t0H" secondAttribute="leading" constant="8" id="VKG-R9-F3Z"/>
+                            <constraint firstAttribute="trailing" secondItem="6Zk-Y8-d79" secondAttribute="trailing" constant="8" id="WwG-qG-FrW"/>
+                            <constraint firstItem="V6W-l9-3vx" firstAttribute="top" secondItem="Gke-tD-e3Y" secondAttribute="bottom" constant="8" id="Zl3-3O-ADA"/>
+                            <constraint firstItem="V6W-l9-3vx" firstAttribute="leading" secondItem="nrk-o7-t0H" secondAttribute="leading" constant="9" id="bic-4E-gp5"/>
+                            <constraint firstAttribute="trailing" secondItem="9re-zI-YaZ" secondAttribute="trailing" constant="10" id="ciY-no-3zs"/>
+                            <constraint firstItem="1bh-PZ-5P9" firstAttribute="leading" secondItem="nrk-o7-t0H" secondAttribute="leading" constant="8" id="ddu-mK-WIG"/>
+                            <constraint firstAttribute="height" constant="298" id="duo-Vc-Vuy"/>
+                            <constraint firstItem="Mwm-Pq-kKp" firstAttribute="leading" secondItem="nrk-o7-t0H" secondAttribute="leading" constant="8" id="g1w-kc-dso"/>
+                            <constraint firstItem="1bh-PZ-5P9" firstAttribute="centerX" secondItem="nrk-o7-t0H" secondAttribute="centerX" id="klJ-np-XX0"/>
+                            <constraint firstItem="1bh-PZ-5P9" firstAttribute="top" secondItem="V6W-l9-3vx" secondAttribute="bottom" constant="11" id="lMx-Oz-Utm"/>
+                            <constraint firstItem="CZg-Dc-9A9" firstAttribute="top" secondItem="nrk-o7-t0H" secondAttribute="top" constant="7" id="q6k-F3-65B"/>
+                            <constraint firstItem="6Zk-Y8-d79" firstAttribute="centerX" secondItem="nrk-o7-t0H" secondAttribute="centerX" id="qNu-tn-puL"/>
+                            <constraint firstAttribute="trailing" secondItem="Gke-tD-e3Y" secondAttribute="trailing" constant="8" id="rNW-QU-z7p"/>
+                            <constraint firstItem="9re-zI-YaZ" firstAttribute="top" secondItem="6Zk-Y8-d79" secondAttribute="bottom" constant="-3" id="vYf-Cb-NaR"/>
+                            <constraint firstAttribute="trailing" secondItem="V6W-l9-3vx" secondAttribute="trailing" constant="9" id="yQK-qv-239"/>
+                            <constraint firstAttribute="trailing" secondItem="CZg-Dc-9A9" secondAttribute="trailing" constant="8" id="z8I-LB-wof"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="0.5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="nrk-o7-t0H" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="18R-Am-rxS"/>
+                    <constraint firstAttribute="trailing" secondItem="nrk-o7-t0H" secondAttribute="trailing" id="dA4-Qd-ZEr"/>
+                    <constraint firstItem="nrk-o7-t0H" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="swi-sc-fCt"/>
+                </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                        <real key="value" value="5"/>
+                    </userDefinedRuntimeAttribute>
+                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </userDefinedRuntimeAttribute>
+                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                        <size key="value" width="2" height="2"/>
+                    </userDefinedRuntimeAttribute>
+                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                        <real key="value" value="3"/>
+                    </userDefinedRuntimeAttribute>
+                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                        <real key="value" value="3"/>
+                    </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="amountRaised" destination="Mwm-Pq-kKp" id="cEm-4X-dh1"/>
+                <outlet property="campaignDescription" destination="6Zk-Y8-d79" id="TVY-Md-7UD"/>
+                <outlet property="campaignImage" destination="Gke-tD-e3Y" id="5l8-uf-7Nf"/>
+                <outlet property="campaignName" destination="V6W-l9-3vx" id="ZYI-o0-Zbg"/>
+                <outlet property="dateModified" destination="9re-zI-YaZ" id="8Xi-MN-u6I"/>
+                <outlet property="progressBar" destination="1bh-PZ-5P9" id="mrc-k7-1ey"/>
+                <outlet property="wholeview" destination="nrk-o7-t0H" id="kY1-Xa-F6A"/>
+            </connections>
+            <point key="canvasLocation" x="-40.579710144927539" y="91.40625"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="pregnant" width="5616" height="3744"/>
+    </resources>
+</document>

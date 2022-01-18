@@ -1,0 +1,70 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '10.0'
+
+
+target 'Chango v2' do
+use_frameworks!
+
+	pod 'Firebase/Analytics'
+	pod 'Firebase/DynamicLinks'
+	pod 'Firebase/Auth'
+	pod 'Firebase/Database'
+	pod 'Firebase/Messaging'
+	pod 'Firebase/Crashlytics'
+	pod 'Firebase/Storage'
+	pod 'Firebase/Core'
+	pod 'Firebase/InAppMessaging'
+	pod "BWWalkthrough"
+	pod "KWVerificationCodeView"
+    	pod 'IQKeyboardManagerSwift'
+	pod 'Nuke'
+	pod 'DropDown'
+	pod 'NVActivityIndicatorView'
+	pod "ESPullToRefresh"
+	pod 'EPContactsPicker'
+	pod 'Alamofire', '~> 5.0.0.beta.1'
+    	pod 'FTIndicator'
+         pod 'PopupDialog', '~> 0.5'
+	pod "ESPullToRefresh"
+	pod 'MultiProgressView'
+	pod 'Fabric', '~> 1.10.2'
+        #pod 'PhoneNumberKit', '~> 3.1'
+	pod 'CreditCardForm'
+	pod 'Stripe', '21.4.0'
+	pod 'CardScan'
+	pod 'PayCardsRecognizer'
+	pod 'Sodium'
+	pod 'RNCryptor', '~> 5.0'
+	pod "CCValidator"
+	pod 'GoogleSignIn', '~> 5.0.2'
+	pod 'FBSDKLoginKit'
+	pod 'TwitterKit'
+
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+	
+	pod 'SDWebImage', '~> 5.0'
+	pod 'PhoneNumberKit'
+	pod 'FLAnimatedImage', :modular_headers => true
+	pod 'FTPopOverMenu_Swift', '~> 0.1.4'
+	pod 'CropViewController'
+	pod 'ARSLineProgress'
+	pod 'libPhoneNumber-iOS', '~> 0.8'
+	pod 'DLRadioButton', '~> 1.4'
+
+
+  # Pods for Chango v2
+
+  target 'Chango v2Tests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+
+end
+
+
+  target 'Chango v2UITests' do
+    inherit! :search_paths
+    # Pods for testing
+	
+  end

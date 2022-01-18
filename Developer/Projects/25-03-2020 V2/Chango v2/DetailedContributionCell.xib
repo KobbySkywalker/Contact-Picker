@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Sora-Regular.ttf">
+            <string>Sora-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="EPs-fO-qGi" customClass="DetailedContributionCell" customModule="Chango_v2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="28"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7D-X2-B5m">
+                    <rect key="frame" x="69" y="5" width="113" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="113" id="5ur-9R-MbG"/>
+                        <constraint firstAttribute="height" constant="17" id="ens-eD-24j"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Sora-Regular" family="Sora" pointSize="10"/>
+                    <color key="textColor" red="0.44705882349999998" green="0.44705882349999998" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cg-ht-Hh5">
+                    <rect key="frame" x="197" y="5" width="130" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="130" id="C9P-L3-FEi"/>
+                        <constraint firstAttribute="height" constant="16" id="fY8-Yg-Ubb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Sora-Regular" family="Sora" pointSize="10"/>
+                    <color key="textColor" red="0.019607843140000001" green="0.25098039220000001" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="0cg-ht-Hh5" firstAttribute="leading" secondItem="EPs-fO-qGi" secondAttribute="leading" constant="197" id="QJl-gk-BIs"/>
+                <constraint firstItem="0cg-ht-Hh5" firstAttribute="top" secondItem="EPs-fO-qGi" secondAttribute="top" constant="5" id="Saz-eZ-U6e"/>
+                <constraint firstItem="i7D-X2-B5m" firstAttribute="trailing" secondItem="EPs-fO-qGi" secondAttribute="trailingMargin" constant="-145" id="VDw-64-WOU"/>
+                <constraint firstItem="i7D-X2-B5m" firstAttribute="baseline" secondItem="0cg-ht-Hh5" secondAttribute="baseline" constant="1" id="iKO-5G-OKP"/>
+                <constraint firstItem="i7D-X2-B5m" firstAttribute="leading" secondItem="0cg-ht-Hh5" secondAttribute="trailing" constant="-258" id="nK7-Ca-rTz"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="amount" destination="0cg-ht-Hh5" id="8zn-5C-772"/>
+                <outlet property="date" destination="i7D-X2-B5m" id="fYz-ZB-RX1"/>
+            </connections>
+            <point key="canvasLocation" x="-60" y="92.653673163418304"/>
+        </view>
+    </objects>
+</document>

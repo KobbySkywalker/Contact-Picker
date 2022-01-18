@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Sora-Regular.ttf">
+            <string>Sora-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="105" id="KGk-i7-Jjw" customClass="MandateCell" customModule="Chango_v2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J2W-HJ-e78">
+                        <rect key="frame" x="22" y="15" width="155" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="6SE-Wd-lYg"/>
+                            <constraint firstAttribute="width" constant="155" id="jC0-J1-Ane"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Sora-Regular" family="Sora" pointSize="13"/>
+                        <color key="textColor" red="0.44705882349999998" green="0.44705882349999998" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYj-ec-0oY">
+                        <rect key="frame" x="189" y="15" width="121" height="29"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="29" id="zPF-fi-7eq"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Sora-Regular" family="Sora" pointSize="16"/>
+                        <color key="textColor" red="0.019607843140000001" green="0.25098039220000001" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1I-5w-D9v">
+                        <rect key="frame" x="22" y="35" width="155" height="23"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="23" id="KI2-6i-iI8"/>
+                            <constraint firstAttribute="width" constant="155" id="yRa-tA-0bj"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Sora-Regular" family="Sora" pointSize="16"/>
+                        <color key="textColor" red="0.019607843140000001" green="0.25098039220000001" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Itj-Un-ejp">
+                        <rect key="frame" x="191" y="44" width="119" height="14"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cancelled" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpU-QK-kR1">
+                                <rect key="frame" x="0.0" y="0.0" width="47" height="14"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="47" id="4de-0I-Hmj"/>
+                                    <constraint firstAttribute="height" constant="14" id="D5F-0k-VKL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Sora-Regular" family="Sora" pointSize="8"/>
+                                <color key="textColor" red="0.94509803920000002" green="0.2666666667" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R0i-JH-ONR">
+                                <rect key="frame" x="47" y="0.0" width="72" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="Kpb-DG-xUu"/>
+                                    <constraint firstAttribute="height" constant="14" id="mht-20-uNY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Sora-Regular" family="Sora" pointSize="8"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="c7I-TW-c6q"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="C1I-5w-D9v" firstAttribute="top" secondItem="J2W-HJ-e78" secondAttribute="bottom" id="086-34-QlK"/>
+                    <constraint firstItem="J2W-HJ-e78" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="22" id="3OQ-xp-czG"/>
+                    <constraint firstItem="NYj-ec-0oY" firstAttribute="leading" secondItem="J2W-HJ-e78" secondAttribute="trailing" constant="12" id="3kF-ZI-0Ob"/>
+                    <constraint firstItem="C1I-5w-D9v" firstAttribute="bottom" secondItem="Itj-Un-ejp" secondAttribute="bottom" id="4im-2U-JLf"/>
+                    <constraint firstItem="NYj-ec-0oY" firstAttribute="top" secondItem="C1I-5w-D9v" secondAttribute="bottom" constant="-43" id="BYF-Wg-0yS"/>
+                    <constraint firstItem="C1I-5w-D9v" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="22" id="GKf-bA-1We"/>
+                    <constraint firstAttribute="trailing" secondItem="Itj-Un-ejp" secondAttribute="trailing" constant="10" id="JYA-eq-68y"/>
+                    <constraint firstItem="NYj-ec-0oY" firstAttribute="top" secondItem="J2W-HJ-e78" secondAttribute="top" id="Q0y-2c-TsF"/>
+                    <constraint firstAttribute="trailing" secondItem="NYj-ec-0oY" secondAttribute="trailing" constant="10" id="UoF-l9-2o2"/>
+                    <constraint firstItem="Itj-Un-ejp" firstAttribute="trailing" secondItem="NYj-ec-0oY" secondAttribute="trailing" id="W3o-kb-0zr"/>
+                    <constraint firstAttribute="trailing" secondItem="J2W-HJ-e78" secondAttribute="trailing" constant="143" id="dtP-Xl-13v"/>
+                    <constraint firstItem="J2W-HJ-e78" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="est-Nr-utF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="amount" destination="NYj-ec-0oY" id="2rd-Pc-FLj"/>
+                <outlet property="debitDate" destination="R0i-JH-ONR" id="RxX-JP-vyH"/>
+                <outlet property="frequency" destination="C1I-5w-D9v" id="ZXw-pP-kiD"/>
+                <outlet property="groupName" destination="J2W-HJ-e78" id="MHP-sW-lEC"/>
+                <outlet property="status" destination="vpU-QK-kR1" id="vTP-mg-6HZ"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="169.41964285714286"/>
+        </tableViewCell>
+    </objects>
+</document>

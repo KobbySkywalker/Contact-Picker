@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Sora-Light.ttf">
+            <string>Sora-Light</string>
+        </array>
+        <array key="Sora-Regular.ttf">
+            <string>Sora-Regular</string>
+        </array>
+        <array key="Sora-SemiBold.ttf">
+            <string>Sora-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="OV3-Lz-rfo" customClass="PublicContributionsCell" customModule="Chango_v2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="66"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fXI-Pi-HUP">
+                    <rect key="frame" x="0.0" y="0.0" width="343" height="66"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Burger" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AEt-e4-VUc">
+                    <rect key="frame" x="69" y="21" width="159" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="159" id="YWx-Dt-ZYm"/>
+                        <constraint firstAttribute="height" constant="23" id="xqp-UP-i8p"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Sora-Regular" family="Sora" pointSize="18"/>
+                    <color key="textColor" red="0.019607843140000001" green="0.25098039220000001" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Burger" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8d-ol-gAH">
+                    <rect key="frame" x="69" y="41" width="148" height="14"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="14" id="ZVh-Ot-55a"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Sora-Light" family="Sora" pointSize="8"/>
+                    <color key="textColor" red="0.44705882349999998" green="0.44705882349999998" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Burger" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0n-3u-BG0">
+                    <rect key="frame" x="232" y="21" width="59" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="nhq-ue-nXw"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Sora-SemiBold" family="Sora" pointSize="17"/>
+                    <color key="textColor" red="0.019607843140000001" green="0.25098039220000001" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="individual" translatesAutoresizingMaskIntoConstraints="NO" id="NOU-F7-0XX">
+                    <rect key="frame" x="8" y="10" width="45" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="P0W-2j-P7I"/>
+                        <constraint firstAttribute="width" constant="45" id="ftT-Wj-K0L"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="kbM-qR-88y"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="K8d-ol-gAH" firstAttribute="top" secondItem="AEt-e4-VUc" secondAttribute="bottom" constant="-3" id="2h5-3C-at7"/>
+                <constraint firstItem="NOU-F7-0XX" firstAttribute="leading" secondItem="OV3-Lz-rfo" secondAttribute="leading" constant="8" id="Hni-MO-ZUD"/>
+                <constraint firstItem="AEt-e4-VUc" firstAttribute="leading" secondItem="NOU-F7-0XX" secondAttribute="trailing" constant="16" id="IA0-dp-5hs"/>
+                <constraint firstItem="K8d-ol-gAH" firstAttribute="top" secondItem="D0n-3u-BG0" secondAttribute="bottom" constant="-2" id="Ngt-Jj-50J"/>
+                <constraint firstItem="D0n-3u-BG0" firstAttribute="top" secondItem="OV3-Lz-rfo" secondAttribute="top" constant="21" id="Oxf-Gh-3Gi"/>
+                <constraint firstItem="K8d-ol-gAH" firstAttribute="trailing" secondItem="AEt-e4-VUc" secondAttribute="trailing" constant="-11" id="Smh-T0-Vib"/>
+                <constraint firstItem="K8d-ol-gAH" firstAttribute="bottom" secondItem="NOU-F7-0XX" secondAttribute="bottom" id="T5M-5Z-nR9"/>
+                <constraint firstItem="fXI-Pi-HUP" firstAttribute="top" secondItem="OV3-Lz-rfo" secondAttribute="top" id="Vi6-Wr-cPn"/>
+                <constraint firstItem="fXI-Pi-HUP" firstAttribute="leading" secondItem="OV3-Lz-rfo" secondAttribute="leading" id="X8K-xe-QhG"/>
+                <constraint firstItem="D0n-3u-BG0" firstAttribute="top" secondItem="AEt-e4-VUc" secondAttribute="top" id="bVX-KP-yqP"/>
+                <constraint firstAttribute="trailing" secondItem="fXI-Pi-HUP" secondAttribute="trailing" id="lOR-vh-k8K"/>
+                <constraint firstItem="NOU-F7-0XX" firstAttribute="top" secondItem="OV3-Lz-rfo" secondAttribute="top" constant="10" id="pIZ-dv-eUM"/>
+                <constraint firstItem="K8d-ol-gAH" firstAttribute="leading" secondItem="AEt-e4-VUc" secondAttribute="leading" id="s0p-ID-UqF"/>
+                <constraint firstItem="D0n-3u-BG0" firstAttribute="leading" secondItem="AEt-e4-VUc" secondAttribute="trailing" constant="4" id="tbT-N1-ULh"/>
+                <constraint firstAttribute="bottom" secondItem="fXI-Pi-HUP" secondAttribute="bottom" id="ubu-dq-gQW"/>
+                <constraint firstItem="K8d-ol-gAH" firstAttribute="leading" secondItem="NOU-F7-0XX" secondAttribute="trailing" constant="16" id="uds-MO-S6c"/>
+                <constraint firstItem="AEt-e4-VUc" firstAttribute="top" secondItem="NOU-F7-0XX" secondAttribute="top" constant="11" id="vAI-Vg-AFn"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="amountLabel" destination="D0n-3u-BG0" id="cmv-T6-XVO"/>
+                <outlet property="dateLabel" destination="AEt-e4-VUc" id="xq8-Et-Fyj"/>
+                <outlet property="userImageView" destination="NOU-F7-0XX" id="1ox-ia-nUJ"/>
+            </connections>
+            <point key="canvasLocation" x="-1950" y="298"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="individual" width="100" height="100"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

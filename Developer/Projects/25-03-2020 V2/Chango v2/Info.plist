@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Allow Arbitary Loads</key>
+	<true/>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Chango V2</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string></string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string></string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.489694872155-0q7f2c7badua4r9vrtb42v8t2kq9udrs</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>1</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>ITC.Chango-v2</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>Exception Domains</key>
+	<dict>
+		<key>NSExceptionAllowsInsecureHTTPLoads</key>
+		<true/>
+		<key>NSIncludesSubdomains</key>
+		<true/>
+		<key>chango-5d0de.firebaseapp.com</key>
+		<string></string>
+		<key>chango-v2-preprod.firebaseapp.com</key>
+		<string></string>
+		<key>domain.com</key>
+		<string></string>
+		<key>googleapis.com</key>
+		<true/>
+		<key>http://ec2-34-251-218-203.eu-west-1.compute.amazonaws.com:8082/api/</key>
+		<string></string>
+	</dict>
+	<key>FacebookAppID</key>
+	<string>252078816788574</string>
+	<key>FacebookClientToken</key>
+	<string>0b36336746a1823b52e6129f8cc6d39e</string>
+	<key>FacebookDisplayName</key>
+	<string>Chango</string>
+	<key>FirebaseDynamicLinksCustomDomains
+FirebaseDynamicLinksCustomDomains</key>
+	<array>
+		<string>https://www.changoapp.com</string>
+	</array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fb</string>
+		<string>twitter</string>
+		<string>instagram</string>
+		<string>googlegmail</string>
+		<string>ms-outlook</string>
+		<string>readdle-spark</string>
+		<string>ymail</string>
+		<string>fbapi</string>
+		<string>fbauth</string>
+		<string>fbauth2</string>
+	</array>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Used to capture or select photos for profile images</string>
+	<key>NSContactsUsageDescription</key>
+	<string>To add contacts to group</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>This is to allow users to use their face id</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Integration of Social Logins ie. Apple, Google, Facebook, Twitter</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Audio recording in chats</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Access to photo library</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+</dict>
+</plist>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>489694872155-0q7f2c7badua4r9vrtb42v8t2kq9udrs.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.489694872155-0q7f2c7badua4r9vrtb42v8t2kq9udrs</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDoQ_UYiwBkT6oE6sbA7-gZf7ZVFZwC4sE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>489694872155</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>ITC.Chango-v2</string>
+	<key>PROJECT_ID</key>
+	<string>chango-v2-preprod</string>
+	<key>STORAGE_BUCKET</key>
+	<string>chango-v2-preprod.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:489694872155:ios:2d33b9386ad45cc0</string>
+	<key>DATABASE_URL</key>
+	<string>https://chango-v2-preprod.firebaseio.com</string>
+</dict>
+</plist>

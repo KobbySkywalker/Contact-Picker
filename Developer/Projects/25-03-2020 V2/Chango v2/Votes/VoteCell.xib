@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Sora-Light.ttf">
+            <string>Sora-Light</string>
+        </array>
+        <array key="Sora-Regular.ttf">
+            <string>Sora-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="66" id="6Rp-7s-Ehd" customClass="VoteCell" customModule="Chango_v2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="412" height="66"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Rp-7s-Ehd" id="LcM-Xi-oDH">
+                <rect key="frame" x="0.0" y="0.0" width="412" height="66"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JiG-Ba-pqT">
+                        <rect key="frame" x="1" y="1" width="410" height="65"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crL-M9-NFH">
+                                <rect key="frame" x="61" y="35" width="243" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="243" id="hn3-wn-use"/>
+                                    <constraint firstAttribute="height" constant="17" id="unV-tQ-YJd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Sora-Light" family="Sora" pointSize="10"/>
+                                <color key="textColor" red="0.44705882349999998" green="0.44705882349999998" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D6z-rF-4c8">
+                                <rect key="frame" x="61" y="10" width="243" height="24.5"/>
+                                <fontDescription key="fontDescription" name="Sora-Regular" family="Sora" pointSize="14"/>
+                                <color key="textColor" red="0.44705882349999998" green="0.44705882349999998" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MeI-1Z-hUG">
+                                <rect key="frame" x="323" y="12" width="70" height="26"/>
+                                <color key="backgroundColor" red="0.94474655389999995" green="0.26803654430000001" blue="0.22345036269999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="Dvs-NL-0M3"/>
+                                    <constraint firstAttribute="height" constant="26" id="ftX-UC-1Be"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Sora-Regular" family="Sora" pointSize="12"/>
+                                <state key="normal" title="Vote">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="2" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="people" translatesAutoresizingMaskIntoConstraints="NO" id="jRi-0H-Fxn">
+                                <rect key="frame" x="8" y="10" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="YcM-cw-K6b"/>
+                                    <constraint firstAttribute="height" constant="45" id="cDD-MS-SHy"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62B-Qt-sF8">
+                                <rect key="frame" x="323" y="40" width="70" height="13"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="13" id="WG4-eT-VCm"/>
+                                    <constraint firstAttribute="width" constant="70" id="od0-lJ-UnW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Sora-Light" family="Sora" pointSize="8"/>
+                                <color key="textColor" red="0.44705882349999998" green="0.44705882349999998" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jRi-0H-Fxn" firstAttribute="leading" secondItem="JiG-Ba-pqT" secondAttribute="leading" constant="8" id="1LD-Qy-TWm"/>
+                            <constraint firstItem="crL-M9-NFH" firstAttribute="top" secondItem="D6z-rF-4c8" secondAttribute="bottom" constant="0.5" id="74S-Ji-lys"/>
+                            <constraint firstItem="D6z-rF-4c8" firstAttribute="top" secondItem="JiG-Ba-pqT" secondAttribute="top" constant="10" id="AiE-FQ-7LU"/>
+                            <constraint firstItem="D6z-rF-4c8" firstAttribute="leading" secondItem="crL-M9-NFH" secondAttribute="leading" id="CUg-Z5-cdj"/>
+                            <constraint firstItem="62B-Qt-sF8" firstAttribute="leading" secondItem="MeI-1Z-hUG" secondAttribute="leading" id="GP1-B8-X2A"/>
+                            <constraint firstAttribute="trailing" secondItem="MeI-1Z-hUG" secondAttribute="trailing" constant="17" id="N1t-ar-lRJ"/>
+                            <constraint firstItem="62B-Qt-sF8" firstAttribute="top" secondItem="MeI-1Z-hUG" secondAttribute="bottom" constant="2" id="NFQ-KC-uuh"/>
+                            <constraint firstItem="crL-M9-NFH" firstAttribute="leading" secondItem="jRi-0H-Fxn" secondAttribute="trailing" constant="8" id="Ocg-r2-sNA"/>
+                            <constraint firstItem="D6z-rF-4c8" firstAttribute="trailing" secondItem="crL-M9-NFH" secondAttribute="trailing" id="Qxq-mZ-ZPn"/>
+                            <constraint firstItem="62B-Qt-sF8" firstAttribute="centerY" secondItem="crL-M9-NFH" secondAttribute="centerY" constant="3" id="cVU-e4-O1V"/>
+                            <constraint firstItem="D6z-rF-4c8" firstAttribute="baseline" secondItem="MeI-1Z-hUG" secondAttribute="baseline" id="eT4-U1-MPG"/>
+                            <constraint firstItem="jRi-0H-Fxn" firstAttribute="centerY" secondItem="JiG-Ba-pqT" secondAttribute="centerY" id="eoL-SQ-hf3"/>
+                            <constraint firstItem="D6z-rF-4c8" firstAttribute="top" secondItem="jRi-0H-Fxn" secondAttribute="top" id="gVe-NL-Gdh"/>
+                            <constraint firstItem="crL-M9-NFH" firstAttribute="bottom" secondItem="jRi-0H-Fxn" secondAttribute="bottom" constant="-3" id="hzX-74-n4s"/>
+                            <constraint firstItem="crL-M9-NFH" firstAttribute="top" secondItem="D6z-rF-4c8" secondAttribute="bottom" constant="0.5" id="jAY-dA-sfF"/>
+                            <constraint firstItem="jRi-0H-Fxn" firstAttribute="centerY" secondItem="JiG-Ba-pqT" secondAttribute="centerY" id="ruR-bc-f2Z"/>
+                            <constraint firstItem="MeI-1Z-hUG" firstAttribute="leading" secondItem="D6z-rF-4c8" secondAttribute="trailing" constant="19" id="x4Q-zr-Agi"/>
+                            <constraint firstItem="62B-Qt-sF8" firstAttribute="trailing" secondItem="MeI-1Z-hUG" secondAttribute="trailing" id="zBF-Zy-u6o"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="JiG-Ba-pqT" secondAttribute="trailing" constant="1" id="0xF-rJ-sez"/>
+                    <constraint firstItem="JiG-Ba-pqT" firstAttribute="leading" secondItem="LcM-Xi-oDH" secondAttribute="leading" constant="1" id="10z-mu-WGu"/>
+                    <constraint firstItem="JiG-Ba-pqT" firstAttribute="top" secondItem="LcM-Xi-oDH" secondAttribute="top" constant="1" id="Pc9-5G-fAF"/>
+                    <constraint firstAttribute="bottom" secondItem="JiG-Ba-pqT" secondAttribute="bottom" constant="1" id="RsW-dm-dLK"/>
+                </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                        <real key="value" value="5"/>
+                    </userDefinedRuntimeAttribute>
+                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                        <size key="value" width="2" height="2"/>
+                    </userDefinedRuntimeAttribute>
+                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                        <real key="value" value="3"/>
+                    </userDefinedRuntimeAttribute>
+                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                        <real key="value" value="3"/>
+                    </userDefinedRuntimeAttribute>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBounds" value="YES"/>
+                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="dYG-tv-3Hj"/>
+            <connections>
+                <outlet property="cellView" destination="JiG-Ba-pqT" id="7rQ-XP-vrF"/>
+                <outlet property="groupName" destination="D6z-rF-4c8" id="hCU-hH-xbM"/>
+                <outlet property="memberName" destination="crL-M9-NFH" id="biv-JH-efb"/>
+                <outlet property="voteButton" destination="MeI-1Z-hUG" id="oB3-Jp-y3l"/>
+                <outlet property="voteCount" destination="62B-Qt-sF8" id="l1f-5S-UA9"/>
+                <outlet property="voteIcon" destination="jRi-0H-Fxn" id="c2f-lK-yj6"/>
+            </connections>
+            <point key="canvasLocation" x="-11.199999999999999" y="50.374812593703155"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="people" width="100" height="100"/>
+    </resources>
+</document>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CallBackRequestCell" customModule="Chango_v2" customModuleProvider="target">
+            <connections>
+                <outlet property="phoneNumber" destination="nFi-oc-EKW" id="kru-cV-Tdl"/>
+                <outlet property="view" destination="3Ap-ak-nvT" id="bij-jW-uF5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ap-ak-nvT">
+                    <rect key="frame" x="60" y="340" width="294" height="216"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REQUEST CALL BACK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iI3-ec-tv7">
+                            <rect key="frame" x="42" y="15" width="210" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="z3f-Az-ENj"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                            <color key="textColor" red="0.0036284849049999998" green="0.40123277899999998" blue="0.611790061" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zcU-t5-cQC">
+                            <rect key="frame" x="8" y="55" width="278" height="1"/>
+                            <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="Nw3-DR-IIx"/>
+                            </constraints>
+                        </view>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nFi-oc-EKW">
+                            <rect key="frame" x="45.5" y="135" width="203" height="47"/>
+                            <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="203" id="ZJt-U4-1Pw"/>
+                                <constraint firstAttribute="height" constant="47" id="ttb-nZ-xyT"/>
+                            </constraints>
+                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please confirm the number you would like us to call" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ta-Zb-zmh">
+                            <rect key="frame" x="20" y="76" width="254" height="42"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="42" id="CPc-0Q-tqT"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                            <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="iI3-ec-tv7" secondAttribute="trailing" constant="42" id="Aep-1M-8bD"/>
+                        <constraint firstAttribute="trailing" secondItem="nFi-oc-EKW" secondAttribute="trailing" constant="45.5" id="CGc-Vt-lR0"/>
+                        <constraint firstItem="7Ta-Zb-zmh" firstAttribute="top" secondItem="iI3-ec-tv7" secondAttribute="bottom" constant="26" id="DBi-fx-gDw"/>
+                        <constraint firstItem="7Ta-Zb-zmh" firstAttribute="leading" secondItem="3Ap-ak-nvT" secondAttribute="leading" constant="20" id="GMR-oK-YwG"/>
+                        <constraint firstItem="iI3-ec-tv7" firstAttribute="top" secondItem="3Ap-ak-nvT" secondAttribute="top" constant="15" id="JWP-ea-7qa"/>
+                        <constraint firstItem="iI3-ec-tv7" firstAttribute="leading" secondItem="3Ap-ak-nvT" secondAttribute="leading" constant="42" id="NYU-i6-E8d"/>
+                        <constraint firstItem="zcU-t5-cQC" firstAttribute="top" secondItem="iI3-ec-tv7" secondAttribute="bottom" constant="5" id="PK4-Jr-b1g"/>
+                        <constraint firstAttribute="trailing" secondItem="zcU-t5-cQC" secondAttribute="trailing" constant="8" id="PwY-DZ-3pa"/>
+                        <constraint firstAttribute="trailing" secondItem="7Ta-Zb-zmh" secondAttribute="trailing" constant="20" id="TdP-zQ-TxW"/>
+                        <constraint firstItem="nFi-oc-EKW" firstAttribute="leading" secondItem="3Ap-ak-nvT" secondAttribute="leading" constant="45.5" id="WSI-a1-qfY"/>
+                        <constraint firstItem="iI3-ec-tv7" firstAttribute="centerX" secondItem="7Ta-Zb-zmh" secondAttribute="centerX" id="YwN-Y6-GKo"/>
+                        <constraint firstItem="7Ta-Zb-zmh" firstAttribute="centerX" secondItem="nFi-oc-EKW" secondAttribute="centerX" id="dNl-lb-ZsZ"/>
+                        <constraint firstAttribute="bottom" secondItem="nFi-oc-EKW" secondAttribute="bottom" constant="34" id="hhy-9a-pTi"/>
+                        <constraint firstItem="zcU-t5-cQC" firstAttribute="leading" secondItem="3Ap-ak-nvT" secondAttribute="leading" constant="8" id="idg-ci-PPn"/>
+                        <constraint firstItem="zcU-t5-cQC" firstAttribute="centerX" secondItem="3Ap-ak-nvT" secondAttribute="centerX" id="jX4-k4-uqU"/>
+                        <constraint firstItem="nFi-oc-EKW" firstAttribute="top" secondItem="7Ta-Zb-zmh" secondAttribute="bottom" constant="17" id="oB6-vH-wvc"/>
+                        <constraint firstAttribute="height" constant="216" id="ylP-i4-mzD"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="3Ap-ak-nvT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="62w-wx-31O"/>
+                <constraint firstItem="3Ap-ak-nvT" firstAttribute="leading" secondItem="FLL-Tq-zSu" secondAttribute="leading" constant="60" id="Gf6-yM-h0j"/>
+                <constraint firstItem="3Ap-ak-nvT" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="SYX-hW-Wna"/>
+                <constraint firstItem="FLL-Tq-zSu" firstAttribute="trailing" secondItem="3Ap-ak-nvT" secondAttribute="trailing" constant="60" id="stS-au-GHr"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="FLL-Tq-zSu"/>
+            <point key="canvasLocation" x="137.68115942028987" y="89.732142857142847"/>
+        </view>
+    </objects>
+</document>

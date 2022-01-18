@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Sora-Light.ttf">
+            <string>Sora-Light</string>
+        </array>
+        <array key="Sora-Regular.ttf">
+            <string>Sora-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="78" id="KGk-i7-Jjw" customClass="MemberContributeCell" customModule="Chango_v2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="376" height="69"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="376" height="69"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="individual" translatesAutoresizingMaskIntoConstraints="NO" id="eZT-22-ou1">
+                        <rect key="frame" x="8" y="14.5" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="aCU-i5-8mn"/>
+                            <constraint firstAttribute="width" constant="40" id="vYa-S1-cYx"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpX-5Q-gTx">
+                        <rect key="frame" x="56" y="14.5" width="231" height="21.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="231" id="6sc-R3-mgP"/>
+                            <constraint firstAttribute="height" constant="21.5" id="8tA-64-wJZ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Sora-Regular" family="Sora" pointSize="11"/>
+                        <color key="textColor" red="0.03893644735" green="0.19578543309999999" blue="0.37017834189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wmv-tv-soE">
+                        <rect key="frame" x="56" y="33" width="231" height="21.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21.5" id="FfX-AC-9fX"/>
+                            <constraint firstAttribute="width" constant="231" id="mVI-va-POX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Sora-Light" family="Sora" pointSize="12"/>
+                        <color key="textColor" red="0.44705882349999998" green="0.44705882349999998" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwf-kE-iqn">
+                        <rect key="frame" x="286" y="19" width="83" height="30"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="SDK-dw-Y0o"/>
+                            <constraint firstAttribute="width" constant="83" id="Z2C-R7-EpA"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Sora-Regular" family="Sora" pointSize="11"/>
+                        <state key="normal" title="Contribute">
+                            <color key="titleColor" red="0.44705882349999998" green="0.44705882349999998" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Wmv-tv-soE" firstAttribute="bottom" secondItem="eZT-22-ou1" secondAttribute="bottom" id="DqZ-xm-8pT"/>
+                    <constraint firstAttribute="bottom" secondItem="eZT-22-ou1" secondAttribute="bottom" constant="15" id="EpC-PW-PtO"/>
+                    <constraint firstItem="eZT-22-ou1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14.5" id="GM8-Nv-LPa"/>
+                    <constraint firstItem="eZT-22-ou1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="P5r-Ic-aDc"/>
+                    <constraint firstItem="eZT-22-ou1" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="RXz-DC-NXv"/>
+                    <constraint firstItem="wpX-5Q-gTx" firstAttribute="leading" secondItem="eZT-22-ou1" secondAttribute="trailing" constant="8" id="UpG-pv-7XZ"/>
+                    <constraint firstItem="jwf-kE-iqn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="19" id="VeS-uP-SjC"/>
+                    <constraint firstItem="wpX-5Q-gTx" firstAttribute="top" secondItem="eZT-22-ou1" secondAttribute="top" id="Zp6-NJ-wTd"/>
+                    <constraint firstAttribute="trailing" secondItem="jwf-kE-iqn" secondAttribute="trailing" constant="7" id="d2u-F2-6y6"/>
+                    <constraint firstAttribute="bottom" secondItem="jwf-kE-iqn" secondAttribute="bottom" constant="19" id="gsi-Jm-3rv"/>
+                    <constraint firstItem="jwf-kE-iqn" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="lGc-pq-N7w"/>
+                    <constraint firstItem="Wmv-tv-soE" firstAttribute="leading" secondItem="eZT-22-ou1" secondAttribute="trailing" constant="8" id="ni3-9t-ILP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="contribute" destination="jwf-kE-iqn" id="2Bx-0A-H5L"/>
+                <outlet property="memberImage" destination="eZT-22-ou1" id="fHj-UV-UTF"/>
+                <outlet property="memberName" destination="wpX-5Q-gTx" id="Ssi-ZV-Yl8"/>
+                <outlet property="memberNumber" destination="Wmv-tv-soE" id="5MI-eI-HA3"/>
+            </connections>
+            <point key="canvasLocation" x="176.81159420289856" y="162.05357142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="individual" width="100" height="100"/>
+    </resources>
+</document>

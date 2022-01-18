@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Sora-Light.ttf">
+            <string>Sora-Light</string>
+        </array>
+        <array key="Sora-Regular.ttf">
+            <string>Sora-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="51" id="UXs-V5-acU" customClass="RecentPersonalDetails" customModule="Chango_v2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UXs-V5-acU" id="Tvw-7S-f3K">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbf-jS-OYk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZlU-Ig-KPZ">
+                        <rect key="frame" x="208" y="11" width="96" height="28.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="96" id="CAn-BE-tud"/>
+                            <constraint firstAttribute="height" constant="28.5" id="umC-Gz-pgP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Sora-Regular" family="Sora" pointSize="16"/>
+                        <color key="textColor" red="0.019607843140000001" green="0.25098039220000001" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIn-nz-6FW">
+                        <rect key="frame" x="11" y="0.0" width="242" height="27"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="27" id="Bla-tW-hr1"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Sora-Regular" family="Sora" pointSize="16"/>
+                        <color key="textColor" red="0.019607843140000001" green="0.25098039220000001" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vpx-dt-Tci">
+                        <rect key="frame" x="11" y="25" width="190" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="Xed-5G-Su6"/>
+                            <constraint firstAttribute="width" constant="190" id="gao-dj-7E9"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Sora-Light" family="Sora" pointSize="10"/>
+                        <color key="textColor" white="0.0" alpha="0.4882277397260274" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="vIn-nz-6FW" firstAttribute="top" secondItem="Tvw-7S-f3K" secondAttribute="top" id="5eH-ka-ywX"/>
+                    <constraint firstItem="vbf-jS-OYk" firstAttribute="centerY" secondItem="Tvw-7S-f3K" secondAttribute="centerY" id="AJy-HF-Xav"/>
+                    <constraint firstItem="vbf-jS-OYk" firstAttribute="top" secondItem="vIn-nz-6FW" secondAttribute="top" id="EUP-LW-hBs"/>
+                    <constraint firstItem="vpx-dt-Tci" firstAttribute="top" secondItem="vIn-nz-6FW" secondAttribute="bottom" constant="-2" id="OPL-5j-Ph7"/>
+                    <constraint firstItem="vIn-nz-6FW" firstAttribute="leading" secondItem="Tvw-7S-f3K" secondAttribute="leadingMargin" constant="-5" id="OUz-zw-PbH"/>
+                    <constraint firstItem="vbf-jS-OYk" firstAttribute="leading" secondItem="vpx-dt-Tci" secondAttribute="trailing" constant="-201" id="Pzc-CR-uRC"/>
+                    <constraint firstItem="vbf-jS-OYk" firstAttribute="centerY" secondItem="ZlU-Ig-KPZ" secondAttribute="centerY" id="Wyi-il-Skh"/>
+                    <constraint firstItem="vpx-dt-Tci" firstAttribute="leading" secondItem="vIn-nz-6FW" secondAttribute="leading" id="g4E-GT-ytH"/>
+                    <constraint firstItem="ZlU-Ig-KPZ" firstAttribute="trailing" secondItem="Tvw-7S-f3K" secondAttribute="trailingMargin" id="kom-Qw-nMy"/>
+                    <constraint firstAttribute="trailing" secondItem="vbf-jS-OYk" secondAttribute="trailing" id="ku7-2o-dH6"/>
+                    <constraint firstItem="vbf-jS-OYk" firstAttribute="leading" secondItem="Tvw-7S-f3K" secondAttribute="leading" id="qhO-6k-NtF"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="vIn-nz-6FW" secondAttribute="trailing" constant="51" id="vXw-Jk-P42"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="VpM-Zx-d3R"/>
+            <connections>
+                <outlet property="campaignAmount" destination="ZlU-Ig-KPZ" id="orm-98-ooQ"/>
+                <outlet property="campaignName" destination="vIn-nz-6FW" id="DtN-Ug-W4Q"/>
+                <outlet property="date" destination="vpx-dt-Tci" id="PcR-pY-bv9"/>
+            </connections>
+            <point key="canvasLocation" x="-72.463768115942031" y="171.76339285714286"/>
+        </tableViewCell>
+    </objects>
+</document>

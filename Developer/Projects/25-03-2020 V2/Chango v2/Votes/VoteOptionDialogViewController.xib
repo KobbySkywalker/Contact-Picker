@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VoteOptionDialogViewController" customModule="Chango_v2" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="FvY-o2-wXw" id="D7j-HS-qfz"/>
+                <outlet property="voteDescription" destination="4JI-fx-Mgm" id="axg-Cv-hkN"/>
+                <outlet property="voteTitle" destination="jlL-4m-FRD" id="Ay9-f5-BEb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="FvY-o2-wXw">
+            <rect key="frame" x="0.0" y="0.0" width="371" height="122"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vote" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlL-4m-FRD">
+                    <rect key="frame" x="24" y="14" width="323" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="Fqq-79-YOd"/>
+                        <constraint firstAttribute="width" constant="323" id="sRL-yN-Zv2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you sure you want to vote for cashout GH 5,000 to this number 0244524329. Let's just be sure guys things can't be surface" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4JI-fx-Mgm">
+                    <rect key="frame" x="16" y="40" width="339" height="68"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="339" id="8pa-Nw-nQR"/>
+                        <constraint firstAttribute="height" constant="68" id="kPA-IF-Bbm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="4JI-fx-Mgm" firstAttribute="trailing" secondItem="FvY-o2-wXw" secondAttribute="trailingMargin" id="9KX-ve-njI"/>
+                <constraint firstItem="Vux-h3-3y2" firstAttribute="bottom" secondItem="4JI-fx-Mgm" secondAttribute="bottom" constant="14" id="HY2-3h-uZC"/>
+                <constraint firstItem="jlL-4m-FRD" firstAttribute="centerX" secondItem="4JI-fx-Mgm" secondAttribute="centerX" id="bIQ-7N-iSO"/>
+                <constraint firstItem="4JI-fx-Mgm" firstAttribute="leading" secondItem="Vux-h3-3y2" secondAttribute="leading" constant="16" id="dK1-5G-l8x"/>
+                <constraint firstItem="4JI-fx-Mgm" firstAttribute="top" secondItem="jlL-4m-FRD" secondAttribute="bottom" constant="1" id="nx2-th-amK"/>
+                <constraint firstItem="jlL-4m-FRD" firstAttribute="top" secondItem="Vux-h3-3y2" secondAttribute="top" constant="14" id="uXY-kD-zoh"/>
+                <constraint firstItem="Vux-h3-3y2" firstAttribute="trailing" secondItem="4JI-fx-Mgm" secondAttribute="trailing" constant="16" id="ukE-lH-6A0"/>
+                <constraint firstItem="4JI-fx-Mgm" firstAttribute="leading" secondItem="FvY-o2-wXw" secondAttribute="leadingMargin" id="xcy-zG-j46"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Vux-h3-3y2"/>
+            <point key="canvasLocation" x="2632.8000000000002" y="304.94752623688157"/>
+        </view>
+    </objects>
+</document>

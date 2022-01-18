@@ -1,0 +1,6 @@
+framework module CCValidator {
+  umbrella header "CCValidator-umbrella.h"
+
+  export *
+  module * { export * }
+}

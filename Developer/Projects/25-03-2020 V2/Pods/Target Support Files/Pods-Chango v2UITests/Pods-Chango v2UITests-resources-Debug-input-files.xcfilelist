@@ -1,0 +1,8 @@
+${PODS_ROOT}/Target Support Files/Pods-Chango v2UITests/Pods-Chango v2UITests-resources.sh
+${PODS_ROOT}/DropDown/DropDown/resources/DropDownCell.xib
+${PODS_ROOT}/EPContactsPicker/Pods/EPContactCell.xib
+${PODS_CONFIGURATION_BUILD_DIR}/EPContactsPicker-library/EPContactsPicker.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/ESPullToRefresh-library/ESPullToRefresh.bundle
+${PODS_ROOT}/FTIndicator/FTIndicator/FTProgressIndicator/FTProgressIndicator.bundle
+${PODS_ROOT}/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Resources/IQKeyboardManager.bundle
+${PODS_ROOT}/PhoneNumberKit/PhoneNumberKit/Resources/PhoneNumberMetadata.json
