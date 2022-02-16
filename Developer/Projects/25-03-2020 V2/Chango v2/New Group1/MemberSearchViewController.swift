@@ -225,8 +225,10 @@ class MemberSearchViewController: BaseViewController, UITableViewDelegate, UITab
             if (myMembers.memberId.memberIconPath == nil){
                 cell.memberImage.image = UIImage(named: "individual")
             }else {
-                Nuke.loadImage(with: URL(string: myMembers.memberId.memberIconPath!)!, into: cell.memberImage)
+                if let memberIconPath = myMembers.memberId.memberIconPath {
+                Nuke.loadImage(with: URL(string: memberIconPath), into: cell.memberImage)
                 print("name image: \(myMembers.memberId.firstName), \(myMembers.memberId.memberIconPath!)!))")
+                }
             }
                         cell.contribute.isHidden = true
             if (currentUser?.displayName == "\(myMembers.memberId.firstName) \(myMembers.memberId.lastName)") {
@@ -251,8 +253,10 @@ class MemberSearchViewController: BaseViewController, UITableViewDelegate, UITab
         if (myMembers.memberId.memberIconPath == nil){
             cell.memberImage.image = UIImage(named: "individual")
         }else {
-            Nuke.loadImage(with: URL(string: myMembers.memberId.memberIconPath!)!, into: cell.memberImage)
+            if let memberIconPath = myMembers.memberId.memberIconPath {
+            Nuke.loadImage(with: URL(string: memberIconPath), into: cell.memberImage)
             print("name image: \(myMembers.memberId.firstName), \(myMembers.memberId.memberIconPath!)!))")
+            }
         }
         cell.contribute.isHidden = true
         if (currentUser?.displayName == "\(myMembers.memberId.firstName) \(myMembers.memberId.lastName)") {
@@ -315,7 +319,7 @@ class MemberSearchViewController: BaseViewController, UITableViewDelegate, UITab
                 let param: ContributeParameter = ContributeParameter(amount: amount, anonymous: anonymous, campaignId: campaignId, currency: self.currency, duration: "", freqType: "", groupId: groupId, narration: groupName, othersMemberId: myMembers.memberId.memberId!, recurring: "false", walletId: walletId)
                 self.contribute(contributeParameter: param)
             }
-        }
+        } else {
         let myMembers: MemberResponse = self.member[indexPath.row]
         print("name: \(myMembers.memberId.firstName) \(myMembers.memberId.lastName), number: \(myMembers.memberId.msisdn)")
         msisdn = myMembers.memberId.msisdn!
@@ -361,6 +365,7 @@ class MemberSearchViewController: BaseViewController, UITableViewDelegate, UITab
             FTIndicator.showProgress(withMessage: "loading")
             let param: ContributeParameter = ContributeParameter(amount: amount, anonymous: anonymous, campaignId: campaignId, currency: self.currency, duration: "", freqType: "", groupId: groupId, narration: groupName, othersMemberId: myMembers.memberId.memberId!, recurring: "false", walletId: walletId)
             self.contribute(contributeParameter: param)
+        }
         }
     }
     

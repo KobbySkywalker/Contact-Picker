@@ -52,6 +52,11 @@ class GroupSettingsViewController: BaseViewController {
     @IBOutlet weak var customRed: UIImageView!
     
     
+    @IBOutlet weak var settingsLabel: UILabel!
+    @IBOutlet weak var cashoutTitle: UILabel!
+    @IBOutlet weak var borrowCheckStack: UIStackView!
+    @IBOutlet weak var cashoutStatementLabel: UILabel!
+    @IBOutlet weak var continueBtn: UIButton!
     
     var countryId: String = ""
     var groupName: String = ""
@@ -61,6 +66,10 @@ class GroupSettingsViewController: BaseViewController {
     var tnc: String = ""
     var loanCheck: Bool = false
     var loanFlag: String = "0"
+    var cashoutPolicyEdit: Bool = false
+    var cashoutPercentage: String = ""
+    var groupId: String = ""
+    var groupProfile: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,6 +77,15 @@ class GroupSettingsViewController: BaseViewController {
         showChatController()
         disableDarkMode()
 //        self.thirty.isMultipleSelectionEnabled = false
+        if cashoutPolicyEdit {
+            borrowCheckStack.isHidden = true
+            disableCashoutOption(minVote: cashoutPercentage)
+            cashoutTitle.text = "Modify Cashout Policy"
+            cashoutStatementLabel.text = "Please note that the exisitng cashout policy is \(cashoutPercentage). To modify, choose among these options"
+            continueBtn.setTitle("Request Change", for: .normal)
+        }else {
+            borrowCheckStack.isHidden = false
+        }
         
         acceptLoansCheckBox.checkboxValueChangedBlock = {
             isOn in
@@ -92,83 +110,145 @@ class GroupSettingsViewController: BaseViewController {
             }
         }
     }
+
+    func disableCashoutOption(minVote: String) {
+        if minVote == "0.25" {
+            cashout25.isEnabled = false
+            cashout25.isHidden = true
+            cashout25.backgroundColor = .gray
+        }else if minVote == "0.50" {
+            cashout50.isEnabled = false
+            cashout50.isHidden = true
+            cashout50.backgroundColor = .gray
+        }else if minVote == "0.75" {
+            cashout75.isEnabled = false
+            cashout75.isHidden = true
+            cashout75.backgroundColor = .gray
+        }else if minVote == "1.00" {
+            cashout100.isEnabled = false
+            cashout100.isHidden = true
+            cashout100.backgroundColor = .gray
+        }else {
+            cashoutCustom.isEnabled = false
+            cashoutCustom.isHidden = true
+            cashoutCustom.backgroundColor = .gray
+        }
+    }
+
+    func enableSelectedOption(minVote: String) {
+        if minVote == "0.25" {
+            cashout25.backgroundColor = UIColor(hexString: "#05406F")
+            cashout50.backgroundColor = UIColor(hexString: "#228CC7")
+            cashout75.backgroundColor = UIColor(hexString: "#228CC7")
+            cashout100.backgroundColor = UIColor(hexString: "#228CC7")
+            cashoutCustom.backgroundColor = UIColor(hexString: "#228CC7")
+
+            cash25red.isHidden = false
+            cash50red.isHidden = true
+            cash75red.isHidden = true
+            cash100red.isHidden = true
+            cashcustomred.isHidden = true
+        }else if minVote == "0.50" {
+            cashout50.backgroundColor = UIColor(hexString: "#05406F")
+            cashout25.backgroundColor = UIColor(hexString: "#228CC7")
+            cashout75.backgroundColor = UIColor(hexString: "#228CC7")
+            cashout100.backgroundColor = UIColor(hexString: "#228CC7")
+            cashoutCustom.backgroundColor = UIColor(hexString: "#228CC7")
+                //red check
+            cash50red.isHidden = false
+            cash25red.isHidden = true
+            cash75red.isHidden = true
+            cash100red.isHidden = true
+            cashcustomred.isHidden = true
+        }else if minVote == "0.75" {
+            cashout75.backgroundColor = UIColor(hexString: "#05406F")
+            cashout50.backgroundColor = UIColor(hexString: "#228CC7")
+            cashout25.backgroundColor = UIColor(hexString: "#228CC7")
+            cashout100.backgroundColor = UIColor(hexString: "#228CC7")
+            cashoutCustom.backgroundColor = UIColor(hexString: "#228CC7")
+
+            cash75red.isHidden = false
+            cash25red.isHidden = true
+            cash50red.isHidden = true
+            cash100red.isHidden = true
+            cashcustomred.isHidden = true
+        }else if minVote == "1.00" {
+            cashout100.backgroundColor = UIColor(hexString: "#05406F")
+            cashout50.backgroundColor = UIColor(hexString: "#228CC7")
+            cashout75.backgroundColor = UIColor(hexString: "#228CC7")
+            cashout25.backgroundColor = UIColor(hexString: "#228CC7")
+            cashoutCustom.backgroundColor = UIColor(hexString: "#228CC7")
+
+            cash100red.isHidden = false
+            cash25red.isHidden = true
+            cash75red.isHidden = true
+            cash50red.isHidden = true
+            cashcustomred.isHidden = true
+        }else {
+            cashoutCustom.backgroundColor = UIColor(hexString: "#05406F")
+            cashout50.backgroundColor = UIColor(hexString: "#228CC7")
+            cashout75.backgroundColor = UIColor(hexString: "#228CC7")
+            cashout100.backgroundColor = UIColor(hexString: "#228CC7")
+            cashout25.backgroundColor = UIColor(hexString: "#228CC7")
+
+            cashcustomred.isHidden = false
+            cash25red.isHidden = true
+            cash75red.isHidden = true
+            cash100red.isHidden = true
+            cash50red.isHidden = true
+
+            showAlert(title: "Cashout Custom Policy", message: "Selecting this policy means that only and all Admins will vote for cashout. The minimum number of Admins must not be less than 2.")
+        }
+    }
     
     @IBAction func cashoutBtn25(_ sender: Any) {
         cashoutMinVote = "0.25"
-        cashout25.backgroundColor = UIColor(hexString: "#05406F")
-        cashout50.backgroundColor = UIColor(hexString: "#228CC7")
-        cashout75.backgroundColor = UIColor(hexString: "#228CC7")
-        cashout100.backgroundColor = UIColor(hexString: "#228CC7")
-        cashoutCustom.backgroundColor = UIColor(hexString: "#228CC7")
-        
-        cash25red.isHidden = false
-        cash50red.isHidden = true
-        cash75red.isHidden = true
-        cash100red.isHidden = true
-        cashcustomred.isHidden = true
+        if cashoutPolicyEdit && cashoutPercentage != "0.25" {
+            disableCashoutOption(minVote: cashoutPercentage)
+            enableSelectedOption(minVote: cashoutMinVote)
+        }else {
+            enableSelectedOption(minVote: cashoutMinVote)
+        }
     }
     
     @IBAction func cashoutBtn50(_ sender: Any) {
         cashoutMinVote = "0.50"
-        cashout50.backgroundColor = UIColor(hexString: "#05406F")
-        cashout25.backgroundColor = UIColor(hexString: "#228CC7")
-        cashout75.backgroundColor = UIColor(hexString: "#228CC7")
-        cashout100.backgroundColor = UIColor(hexString: "#228CC7")
-        cashoutCustom.backgroundColor = UIColor(hexString: "#228CC7")
-            //red check
-        cash50red.isHidden = false
-        cash25red.isHidden = true
-        cash75red.isHidden = true
-        cash100red.isHidden = true
-        cashcustomred.isHidden = true
-
+        if cashoutPolicyEdit && cashoutPercentage != "0.50"{
+            disableCashoutOption(minVote: cashoutPercentage)
+            enableSelectedOption(minVote: cashoutMinVote)
+        }else {
+            enableSelectedOption(minVote: cashoutMinVote)
+        }
     }
     
     @IBAction func cashoutBtn75(_ sender: Any) {
         cashoutMinVote = "0.75"
-        cashout75.backgroundColor = UIColor(hexString: "#05406F")
-        cashout50.backgroundColor = UIColor(hexString: "#228CC7")
-        cashout25.backgroundColor = UIColor(hexString: "#228CC7")
-        cashout100.backgroundColor = UIColor(hexString: "#228CC7")
-        cashoutCustom.backgroundColor = UIColor(hexString: "#228CC7")
-        
-        cash75red.isHidden = false
-        cash25red.isHidden = true
-        cash50red.isHidden = true
-        cash100red.isHidden = true
-        cashcustomred.isHidden = true
+        if cashoutPolicyEdit && cashoutPercentage != "0.25"{
+            disableCashoutOption(minVote: cashoutPercentage)
+            enableSelectedOption(minVote: cashoutMinVote)
+        }else {
+            enableSelectedOption(minVote: cashoutMinVote)
+        }
     }
     
     @IBAction func cashoutBtn100(_ sender: Any) {
         cashoutMinVote = "1.00"
-        cashout100.backgroundColor = UIColor(hexString: "#05406F")
-        cashout50.backgroundColor = UIColor(hexString: "#228CC7")
-        cashout75.backgroundColor = UIColor(hexString: "#228CC7")
-        cashout25.backgroundColor = UIColor(hexString: "#228CC7")
-        cashoutCustom.backgroundColor = UIColor(hexString: "#228CC7")
-        
-        cash100red.isHidden = false
-        cash25red.isHidden = true
-        cash75red.isHidden = true
-        cash50red.isHidden = true
-        cashcustomred.isHidden = true
+        if cashoutPolicyEdit && cashoutPercentage != "0.25"{
+            disableCashoutOption(minVote: cashoutPercentage)
+            enableSelectedOption(minVote: cashoutMinVote)
+        }else {
+            enableSelectedOption(minVote: cashoutMinVote)
+        }
     }
     
     @IBAction func cashoutCustomBtn(_ sender: Any) {
         cashoutMinVote = "custom"
-        cashoutCustom.backgroundColor = UIColor(hexString: "#05406F")
-        cashout50.backgroundColor = UIColor(hexString: "#228CC7")
-        cashout75.backgroundColor = UIColor(hexString: "#228CC7")
-        cashout100.backgroundColor = UIColor(hexString: "#228CC7")
-        cashout25.backgroundColor = UIColor(hexString: "#228CC7")
-        
-        cashcustomred.isHidden = false
-        cash25red.isHidden = true
-        cash75red.isHidden = true
-        cash100red.isHidden = true
-        cash50red.isHidden = true
-        
-        showAlert(title: "Cashout Custom Policy", message: "Selecting this policy means that only and all Admins will vote for cashout. The minimum number of Admins must not be less than 2.")
+        if cashoutPolicyEdit && cashoutPercentage != "0.25"{
+            disableCashoutOption(minVote: cashoutPercentage)
+            enableSelectedOption(minVote: cashoutMinVote)
+        }else {
+            enableSelectedOption(minVote: cashoutMinVote)
+        }
     }
     
     
@@ -331,6 +411,25 @@ class GroupSettingsViewController: BaseViewController {
     
     
     @IBAction func nextButtonAction(_ sender: UIButton) {
+        if cashoutPolicyEdit {
+            print("request change")
+            if cashoutMinVote == "" {
+                showAlert(title: "Chango", message: "Please select a cashout percentage.")
+            }else {
+            let vc: VerifyAccountVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "verifyaccount") as! VerifyAccountVC
+            vc.groupName = groupName
+            vc.cashoutPolicyEdit = cashoutPolicyEdit
+            vc.groupId = groupId
+            vc.newMinVote = cashoutMinVote
+            vc.groupIconPath = groupProfile
+            self.navigationController?.pushViewController(vc, animated: true)
+                }
+        }else {
+            actionsForGroupCreation()
+        }
+    }
+
+    func actionsForGroupCreation() {
         if cashoutMinVote == "" {
             showAlert(title: "Chango", message: "Please select a cashout percentage.")
         }else if (loanCheck == true && acceptLoansCheckBox.isOn() && loanMinVote == "") {

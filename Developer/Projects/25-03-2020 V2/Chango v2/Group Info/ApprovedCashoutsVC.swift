@@ -347,10 +347,10 @@ class ApprovedCashoutsVC: BaseViewController, UITableViewDelegate, UITableViewDa
                     let myCampaigns: GetGroupCampaignsResponse = self.campaignDetails[indexPath.row]
 
                     groupNamed = myCampaigns.campaignName
-                    campaignId = myCampaigns.campaignId
+                campaignId = myCampaigns.campaignId ?? ""
                     status = myCampaigns.status!
                 
-                vc.campaignId = myCampaigns.campaignId
+                vc.campaignId = myCampaigns.campaignId ?? ""
                 vc.creatorInfo = created
                 vc.privateGroup = privateGroup
                 

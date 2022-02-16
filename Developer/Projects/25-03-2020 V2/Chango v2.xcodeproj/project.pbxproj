@@ -389,7 +389,6 @@
 		D5919B0124AA2B7500761AEC /* VerifyCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5919B0024AA2B7500761AEC /* VerifyCodeViewModel.swift */; };
 		D5919B0324AA2B8E00761AEC /* AddMobileNumberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5919B0224AA2B8E00761AEC /* AddMobileNumberViewModel.swift */; };
 		D5919B0524AA2BA300761AEC /* CompleteRegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5919B0424AA2BA300761AEC /* CompleteRegistrationViewModel.swift */; };
-		D593133123992F1600B0CCE2 /* GroupPolicies.swift in Sources */ = {isa = PBXBuildFile; fileRef = D593133023992F1600B0CCE2 /* GroupPolicies.swift */; };
 		D5931D3322E9C38900DF111C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5931D3222E9C38800DF111C /* GoogleService-Info.plist */; };
 		D59457032221A3D300A50302 /* ContributionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59457022221A3D300A50302 /* ContributionsViewController.swift */; };
 		D594570A22230F7800A50302 /* MenuSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D594570522230F7700A50302 /* MenuSectionHeaderView.xib */; };
@@ -510,6 +509,7 @@
 		D5F55CC722CFC07F00931A65 /* RecentPersonalDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F55CC522CFC07F00931A65 /* RecentPersonalDetails.swift */; };
 		D5F55CC822CFC07F00931A65 /* RecentPersonalDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5F55CC622CFC07F00931A65 /* RecentPersonalDetails.xib */; };
 		D5F658B6224BFAC500D77453 /* MyContributionsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F658B5224BFAC500D77453 /* MyContributionsSection.swift */; };
+		D5FCB50827A80A5800B2F16F /* VerifyAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FCB50727A80A5800B2F16F /* VerifyAccountVC.swift */; };
 		D5FF1BDE2237D8FD00A2F3E4 /* MembersRTDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FF1BDD2237D8FD00A2F3E4 /* MembersRTDB.swift */; };
 		D5FF1BE02237E5AF00A2F3E4 /* Grants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FF1BDF2237E5AF00A2F3E4 /* Grants.swift */; };
 		D5FF1BE22237E62800A2F3E4 /* Revokes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FF1BE12237E62800A2F3E4 /* Revokes.swift */; };
@@ -951,7 +951,6 @@
 		D5919B0024AA2B7500761AEC /* VerifyCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyCodeViewModel.swift; sourceTree = "<group>"; };
 		D5919B0224AA2B8E00761AEC /* AddMobileNumberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMobileNumberViewModel.swift; sourceTree = "<group>"; };
 		D5919B0424AA2BA300761AEC /* CompleteRegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteRegistrationViewModel.swift; sourceTree = "<group>"; };
-		D593133023992F1600B0CCE2 /* GroupPolicies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupPolicies.swift; sourceTree = "<group>"; };
 		D5931D3222E9C38800DF111C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D59457022221A3D300A50302 /* ContributionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionsViewController.swift; sourceTree = "<group>"; };
 		D594570522230F7700A50302 /* MenuSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MenuSectionHeaderView.xib; path = "Chango v2/MenuSectionHeaderView.xib"; sourceTree = SOURCE_ROOT; };
@@ -1076,6 +1075,7 @@
 		D5F55CC522CFC07F00931A65 /* RecentPersonalDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentPersonalDetails.swift; sourceTree = "<group>"; };
 		D5F55CC622CFC07F00931A65 /* RecentPersonalDetails.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentPersonalDetails.xib; sourceTree = "<group>"; };
 		D5F658B5224BFAC500D77453 /* MyContributionsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyContributionsSection.swift; sourceTree = "<group>"; };
+		D5FCB50727A80A5800B2F16F /* VerifyAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyAccountVC.swift; sourceTree = "<group>"; };
 		D5FF1BDD2237D8FD00A2F3E4 /* MembersRTDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersRTDB.swift; sourceTree = "<group>"; };
 		D5FF1BDF2237E5AF00A2F3E4 /* Grants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grants.swift; sourceTree = "<group>"; };
 		D5FF1BE12237E62800A2F3E4 /* Revokes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Revokes.swift; sourceTree = "<group>"; };
@@ -1217,7 +1217,6 @@
 		84FEBDA121A30FF20090D4BD /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				D53F8A7D233A1386009D9575 /* Main.storyboard */,
 				C3EA80BB216B77F700F7C554 /* Walkthrough.storyboard */,
 			);
 			path = Storyboards;
@@ -1263,7 +1262,6 @@
 				D5740ED9242E2311006135D7 /* InitiateAdminCreationResponse.swift */,
 				D56441DE242B74E600DC67E0 /* GroupLimitsResponse.swift */,
 				D56441DD242B74E600DC67E0 /* ReportCampaign.swift */,
-				D593133023992F1600B0CCE2 /* GroupPolicies.swift */,
 				D533B3B02362046400A5339A /* ExpiryDate.swift */,
 				D5284CAE234B5AE0006F7CB5 /* GroupBalance.swift */,
 				D52C912E23267E3F00A01F32 /* CreatedVotesResponse.swift */,
@@ -1411,11 +1409,11 @@
 				D599F0EB258B94E6006FD462 /* Terms&Conditions-Chango.pdf */,
 				D588A1F324AA1B5E000B72E6 /* Modules */,
 				D5931D3222E9C38800DF111C /* GoogleService-Info.plist */,
+				C30F76C621A3190100B92239 /* DevGoogleService-Info.plist */,
 				D55C9A262272116D003CCD9A /* MultiProgressView */,
 				D518A15F225DDDDD00FD2BAC /* Falcon */,
 				C30F76C321A316BE00B92239 /* Chango v2.entitlements */,
 				D5C78B17222D24F7003E2E9C /* MyPlayground.playground */,
-				C30F76C621A3190100B92239 /* DevGoogleService-Info.plist */,
 				C3EA808D216B66CF00F7C554 /* AppDelegate.swift */,
 				D586FC4F223A670C00EDE7C7 /* CampaignObject.swift */,
 				D5BE530F21F9F7A300228C6A /* ChangePasswordViewController.swift */,
@@ -1446,6 +1444,7 @@
 				D52F343921FCC103007F0944 /* Entities */,
 				84FEBD9F21A30F770090D4BD /* Extensions */,
 				C332687721C112E000F70F68 /* Group Creation */,
+				D53F8A7D233A1386009D9575 /* Main.storyboard */,
 				D5F138562224428D00C21DA8 /* Groups */,
 				84FEBDA021A30FB90090D4BD /* Libraries */,
 				D5EAE03F2240F3FF008FC317 /* Loans */,
@@ -1472,6 +1471,7 @@
 				D5356433252B8CFA00D24DC2 /* CircularProgressBar.swift */,
 				D5356435252B8E3500D24DC2 /* ApproveBorrowingVC.swift */,
 				D512021C26CABDCE00CDFB02 /* Helpers */,
+				D5FCB50727A80A5800B2F16F /* VerifyAccountVC.swift */,
 			);
 			path = "Chango v2";
 			sourceTree = "<group>";
@@ -2732,7 +2732,6 @@
 				D5A02012267101540098BC2C /* MemberWalletsVC.swift in Sources */,
 				C35B312F21B0135E002CA44E /* ContactPickerViewController.swift in Sources */,
 				D52F344121FE4808007F0944 /* DropMemberResponse.swift in Sources */,
-				D593133123992F1600B0CCE2 /* GroupPolicies.swift in Sources */,
 				D5299383234F4688001DC4D0 /* BasePageViewController.swift in Sources */,
 				D5080CA0222543DB00CCF4AD /* PublicGroupContactsViewController.swift in Sources */,
 				D53FDC6A24F2D0B400D6F798 /* SupportLocalePickerViewController.swift in Sources */,
@@ -3085,6 +3084,7 @@
 				D55197E222E5DC540015B7B7 /* DetailedCampaignViewController.swift in Sources */,
 				D5919B0324AA2B8E00761AEC /* AddMobileNumberViewModel.swift in Sources */,
 				D52B2F622316A6EF006E49EB /* CashoutSummaryVC.swift in Sources */,
+				D5FCB50827A80A5800B2F16F /* VerifyAccountVC.swift in Sources */,
 				D539A3812237A75B0005C84B /* SendStatementViewController.swift in Sources */,
 				D518A2C8225DDDDE00FD2BAC /* CenteredCollectionViewFlowLayout.swift in Sources */,
 				D52E3EF1220C4671007574EF /* MakeContributionsViewController.swift in Sources */,
@@ -3332,7 +3332,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Sodium/libsodium",
 				);
-				MARKETING_VERSION = 2.7.5;
+				MARKETING_VERSION = 2.8.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "ITC.Chango-v2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Chango v2/New Group1/Chango v2-Bridging-Header.h";
@@ -3369,7 +3369,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Sodium/libsodium",
 				);
-				MARKETING_VERSION = 2.7.5;
+				MARKETING_VERSION = 2.8.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "ITC.Chango-v2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Chango v2/New Group1/Chango v2-Bridging-Header.h";

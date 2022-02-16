@@ -141,3 +141,8 @@ struct RegisterUserResponse: Codable {
     var responseMessage: String?
 }
 
+struct CreateGroupCampaignResponse: Codable {
+    var campaign: GetCampaignContributionResponse?
+    var responseCode: String?
+    var responseMessage: String?
+}

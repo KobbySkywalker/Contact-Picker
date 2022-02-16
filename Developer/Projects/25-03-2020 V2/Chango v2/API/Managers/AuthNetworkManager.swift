@@ -449,9 +449,9 @@ class AuthNetworkManager : NetworkManager{
         }
     }
     
-    static func createCampaign(parameter: CreateCampaignParameter, completion: @escaping (DataResponse<GetGroupCampaignsResponse, AFError>)->Void) {
+    static func createCampaign(parameter: CreateCampaignParameter, completion: @escaping (DataResponse<CreateGroupCampaignResponse, AFError>)->Void) {
         AF.request(AuthRouter.createCampaign(parameter: parameter))
-            .responseDecodable { (response: DataResponse<GetGroupCampaignsResponse, AFError>) in
+            .responseDecodable { (response: DataResponse<CreateGroupCampaignResponse, AFError>) in
                 print(response)
                 print("response code: \(String(describing: response.response?.statusCode))")
                 completion(response)
@@ -822,16 +822,16 @@ class AuthNetworkManager : NetworkManager{
     }
     
     
-    static func getGroupPolicies(parameter: GroupPoliciesParameter, completion: @escaping (DataResponse<GroupPoliciesResponse, AFError>)->Void) {
-        AF.request(AuthRouter.getGroupPolicies(parameter: parameter))
-            .responseDecodable { (response: DataResponse<GroupPoliciesResponse, AFError>) in
-                print(response)
-                print("response code: \(String(describing: response.response?.statusCode))")
-                
-                completion(response)
-                
-        }
-    }
+//    static func getGroupPolicies(parameter: GroupPoliciesParameter, completion: @escaping (DataResponse<GroupPoliciesResponse, AFError>)->Void) {
+//        AF.request(AuthRouter.getGroupPolicies(parameter: parameter))
+//            .responseDecodable { (response: DataResponse<GroupPoliciesResponse, AFError>) in
+//                print(response)
+//                print("response code: \(String(describing: response.response?.statusCode))")
+//                
+//                completion(response)
+//                
+//        }
+//    }
     
     static func getGroupPolicy(parameter: GroupPoliciesParameter, completion: @escaping (DataResponse<GroupPolicyResponse, AFError>)->Void) {
         AF.request(AuthRouter.getGroupPolicy(parameter: parameter))
@@ -1362,6 +1362,15 @@ class AuthNetworkManager : NetworkManager{
     static func memberKycStatus(parameter: MemberKycCompleteParameter ,completion: @escaping (DataResponse<MemberKycStatusResponse, AFError>)->Void) {
         AF.request(AuthRouter.memberKycStatus(parameter: parameter))
             .responseDecodable(completionHandler: {(response: DataResponse<MemberKycStatusResponse, AFError>) in
+                print(response)
+                print("response code: \(String(describing: response.response?.statusCode))")
+                completion(response)
+            })
+    }
+
+    static func initiateCashoutPolicyChange(parameter: CashoutPolicyChangeParameter ,completion: @escaping (DataResponse<InitiateLoanWithWalletResponse, AFError>)->Void) {
+        AF.request(AuthRouter.initiateCashoutPolicyChange(parameter: parameter))
+            .responseDecodable(completionHandler: {(response: DataResponse<InitiateLoanWithWalletResponse, AFError>) in
                 print(response)
                 print("response code: \(String(describing: response.response?.statusCode))")
                 completion(response)

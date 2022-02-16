@@ -132,7 +132,7 @@ class CreateCampaignViewController: BaseViewController {
             print(self.endDate)
             print(campaignName)
             print(group)
-            let parameter: CreateCampaignParameter = CreateCampaignParameter(amountReceived: "0",campaignId: "0", campaignName: campaignName, description: campaignDescription, campaignType: campType, end: self.endDate, groupId: group, start: "0", target: campTarget)
+            let parameter: CreateCampaignParameter = CreateCampaignParameter(amountReceived: "0",campaignId: "", campaignName: campaignName, description: campaignDescription, campaignType: campType, end: self.endDate, groupId: group, start: "0", target: campTarget)
             print(campTarget)
             print(campType)
             print(self.endDate)
@@ -153,12 +153,12 @@ class CreateCampaignViewController: BaseViewController {
         }
     }
     
-    private func parseCreateCampaignResponse(result: DataResponse<GetGroupCampaignsResponse, AFError>){
+    private func parseCreateCampaignResponse(result: DataResponse<CreateGroupCampaignResponse, AFError>){
         FTIndicator.dismissProgress()
         switch result.result {
         case .success(let response):
             print("response: \(response)")
-            let alert = UIAlertController(title: "Chango", message: "Campaign created successfully.", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Chango", message: response.responseMessage, preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default) { (action: UIAlertAction!) in
                 for controller in self.navigationController!.viewControllers as Array {
                     if controller.isKind(of: CampaignsViewController.self){

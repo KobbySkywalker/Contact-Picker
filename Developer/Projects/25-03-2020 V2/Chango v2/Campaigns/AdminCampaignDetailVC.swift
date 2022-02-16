@@ -112,13 +112,13 @@ class AdminCampaignDetailVC: BaseViewController {
     @IBAction func totalContributionsButtonAction(_ sender: Any) {
         FTIndicator.showProgress(withMessage: "loading", userInteractionEnable: false)
 
-        let par: CampaignContributionParameter = CampaignContributionParameter(campaignId: campaignInfo.campaignId)
+        let par: CampaignContributionParameter = CampaignContributionParameter(campaignId: campaignInfo.campaignId ?? "")
         self.getCampaignContribution(campaignContributionParameter: par, campaignData: campaignInfo)
     }
     
     @IBAction func contributeButtonAction(_ sender: Any) {
         let vc: WalletsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "wallets") as! WalletsVC
-        vc.campaignId = campaignInfo.campaignId
+        vc.campaignId = campaignInfo.campaignId ?? ""
         vc.groupNamed = campaignInfo.campaignName
         vc.currency = currency
         vc.groupId = groupId
@@ -223,7 +223,7 @@ class AdminCampaignDetailVC: BaseViewController {
                 vc.groupId = self.groupId
                 vc.groupName = self.campaignName
                 vc.campaignStatement = true
-                vc.campaignId = self.campaignInfo.campaignId
+                vc.campaignId = self.campaignInfo.campaignId ?? ""
                 vc.statementType = "CAMPAIGN"
                 self.navigationController?.pushViewController(vc, animated: true)
             })
@@ -233,7 +233,7 @@ class AdminCampaignDetailVC: BaseViewController {
                 vc.groupId = self.groupId
                 vc.groupName = self.campaignName
                 vc.campaignStatement = true
-                vc.campaignId = self.campaignInfo.campaignId
+                vc.campaignId = self.campaignInfo.campaignId ?? ""
                 vc.statementType = "MEMBER"
                 self.navigationController?.pushViewController(vc, animated: true)
             })
@@ -247,7 +247,7 @@ class AdminCampaignDetailVC: BaseViewController {
                 vc.groupId = self.groupId
                 vc.groupName = self.campaignName
                 vc.campaignStatement = true
-                vc.campaignId = self.campaignInfo.campaignId
+                vc.campaignId = self.campaignInfo.campaignId ?? ""
                 vc.statementType = "CAMPAIGN"
                 self.navigationController?.pushViewController(vc, animated: true)
             })
@@ -256,7 +256,7 @@ class AdminCampaignDetailVC: BaseViewController {
                 vc.groupId = self.groupId
                 vc.groupName = self.campaignName
                 vc.campaignStatement = true
-                vc.campaignId = self.campaignInfo.campaignId
+                vc.campaignId = self.campaignInfo.campaignId ?? ""
                 vc.statementType = "MEMBER"
                 self.navigationController?.pushViewController(vc, animated: true)
             })

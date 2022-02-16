@@ -106,7 +106,7 @@ class AdminCampaignSettingsVC: BaseViewController {
         let alert = UIAlertController(title: "Stop Campaign", message: "Are you sure you want to stop this campaign?", preferredStyle: .alert)
         let yesAction = UIAlertAction(title: "YES", style: .default) { (action: UIAlertAction!) in
             FTIndicator.showProgress(withMessage: "stopping")
-            let parameter : EndCampaignParameter = EndCampaignParameter(campaignId: self.campaignInfo.campaignId)
+            let parameter : EndCampaignParameter = EndCampaignParameter(campaignId: self.campaignInfo.campaignId ?? "")
             self.endCampaign(endCampaignParameter: parameter)
         }
         let noAction = UIAlertAction(title: "NO", style: .default) { (action: UIAlertAction!) in
@@ -120,7 +120,7 @@ class AdminCampaignSettingsVC: BaseViewController {
         if campaignStatus == "running" {
             let alert = UIAlertController(title: "Pause Campaign", message: "Are you sure you want to pause this campaign?", preferredStyle: .alert)
             let yesAction = UIAlertAction(title: "YES", style: .default) { (action: UIAlertAction!) in
-                let parameter : PauseCampaignParameter = PauseCampaignParameter(campaignId: self.campaignInfo.campaignId)
+                let parameter : PauseCampaignParameter = PauseCampaignParameter(campaignId: self.campaignInfo.campaignId ?? "")
                 self.pauseCampaign(pauseCampaignParameter: parameter)
             }
             let noAction = UIAlertAction(title: "NO", style: .default) { (action: UIAlertAction!) in
@@ -134,7 +134,7 @@ class AdminCampaignSettingsVC: BaseViewController {
     @IBAction func extendCampaignButtonAction(_ sender: Any) {
         let vc: ExtendCampaignVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "extend") as! ExtendCampaignVC
         
-        vc.campaignId = campaignInfo.campaignId
+        vc.campaignId = campaignInfo.campaignId ?? ""
         vc.groupId = groupId
 //        self.navigationController?.pushViewController(vc, animated: true)
         vc.modalPresentationStyle = .overFullScreen
@@ -144,7 +144,7 @@ class AdminCampaignSettingsVC: BaseViewController {
     @IBAction func startCampaignButtonAction(_ sender: Any) {
         let alert = UIAlertController(title: "Resume Campaign", message: "Are you sure you want to resume this campaign?", preferredStyle: .alert)
         let yesAction = UIAlertAction(title: "YES", style: .default) { (action: UIAlertAction!) in
-            let parameterr: StartCampaignParameter = StartCampaignParameter(campaignId: self.campaignInfo.campaignId)
+            let parameterr: StartCampaignParameter = StartCampaignParameter(campaignId: self.campaignInfo.campaignId ?? "")
             self.startCampaign(startCampaignParameter: parameterr)
         }
         let noAction = UIAlertAction(title: "NO", style: .default) { (action: UIAlertAction!) in

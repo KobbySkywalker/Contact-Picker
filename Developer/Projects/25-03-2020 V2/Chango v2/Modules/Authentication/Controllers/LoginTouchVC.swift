@@ -123,7 +123,7 @@ class LoginTouchVC: BaseViewController, UITextFieldDelegate {
         
     }
     
-    func versioningCheck(apiVersion: String, forceUpdate: Bool, updateMessage: String, loginButton: Bool) {
+    func versioningCheck(apiVersion: String, forceUpdate: Bool, updateMessage: String, loginButtonStatus: Bool) {
         let appVersion = globalAppVersion
         let appVersionInt = appVersion.replacingOccurrences(of: ".", with: "")
         let apiVersionInt = apiVersion.replacingOccurrences(of: ".", with: "")
@@ -135,7 +135,12 @@ class LoginTouchVC: BaseViewController, UITextFieldDelegate {
                 updateAppAlertMessage(appMessage: "A new version of chango is available, would you like to update?")
             }
         } else {
+            if loginButtonCheck {
+                print("validate")
+                validateAuthentication()
+            }else {
             unlockID()
+            }
         }
     }
 
@@ -342,18 +347,18 @@ class LoginTouchVC: BaseViewController, UITextFieldDelegate {
     @IBAction func loginButtonAction(_ sender: UIButton) {
         
         if ((email.text?.isEmpty)! && (password.text?.isEmpty)!) {
-            
+
             let alert = UIAlertController(title: "LOGIN", message: "Please fill empty fields.", preferredStyle: .alert)
-            
+
             let okAction = UIAlertAction(title: "OK", style: .default) { (action: UIAlertAction!) in
-                
-                
+
+
             }
-            
+
             alert.addAction(okAction)
-            
+
             self.present(alert, animated: true, completion: nil)
-            
+
         }else if isValidEmail(testStr: email.text!) == false {
             
             let alert = UIAlertController(title: "LOGIN", message: "Invalid email.", preferredStyle: .alert)
@@ -375,30 +380,44 @@ class LoginTouchVC: BaseViewController, UITextFieldDelegate {
     }
 
     func validateAuthentication() {
-        FTIndicator.showProgress(withMessage: "logging in")
-        Auth.auth().signIn(withEmail: self.email.text!, password: self.password.text!) { (user, error) in
-            if error != nil {
-                //alert
-                //                        activityIndicatorView.stopAnimating()
-                FTIndicator.dismissProgress()
+        if ((email.text?.isEmpty)! || (password.text?.isEmpty)!) {
 
-                if error?.localizedDescription == "Too many unsuccessful login attempts. Please try again later." {
-                    let alert = UIAlertController(title: "Sign in", message: "Too many unsuccessful login attempts. Please try again later.", preferredStyle: .alert)
-                    let okAction = UIAlertAction(title: "OK", style: .default) { (action: UIAlertAction!) in
-                        print("send reset email")
-                        alert.dismiss(animated: true, completion: nil)
-                    }
-                    alert.addAction(okAction)
-                    self.present(alert, animated: true, completion: nil)
-                }else {
-                let alert = UIAlertController(title: "Sign in", message: "Invalid credentials", preferredStyle: .alert)
-                let okAction = UIAlertAction(title: "OK", style: .default) { (action: UIAlertAction!) in
-                    alert.dismiss(animated: true, completion: nil)
-                }
-                alert.addAction(okAction)
-                self.present(alert, animated: true, completion: nil)
-                }
+            let alert = UIAlertController(title: "LOGIN", message: "Please fill empty fields.", preferredStyle: .alert)
+
+            let okAction = UIAlertAction(title: "OK", style: .default) { (action: UIAlertAction!) in
+
+
             }
+
+            alert.addAction(okAction)
+
+            self.present(alert, animated: true, completion: nil)
+
+        }else {
+            FTIndicator.showProgress(withMessage: "logging in")
+            Auth.auth().signIn(withEmail: self.email.text!, password: self.password.text!) { (user, error) in
+                if error != nil {
+                    //alert
+                    //                        activityIndicatorView.stopAnimating()
+                    FTIndicator.dismissProgress()
+
+                    if error?.localizedDescription == "Too many unsuccessful login attempts. Please try again later." {
+                        let alert = UIAlertController(title: "Sign in", message: "Too many unsuccessful login attempts. Please try again later.", preferredStyle: .alert)
+                        let okAction = UIAlertAction(title: "OK", style: .default) { (action: UIAlertAction!) in
+                            print("send reset email")
+                            alert.dismiss(animated: true, completion: nil)
+                        }
+                        alert.addAction(okAction)
+                        self.present(alert, animated: true, completion: nil)
+                    }else {
+                        let alert = UIAlertController(title: "Sign in", message: "Invalid credentials", preferredStyle: .alert)
+                        let okAction = UIAlertAction(title: "OK", style: .default) { (action: UIAlertAction!) in
+                            alert.dismiss(animated: true, completion: nil)
+                        }
+                        alert.addAction(okAction)
+                        self.present(alert, animated: true, completion: nil)
+                    }
+                }
                 //                else if (!(Auth.auth().currentUser?.phoneNumber != nil)) {
                 //
                 //                    let vc: AddMobileNumberVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mobile") as! AddMobileNumberVC
@@ -407,27 +426,27 @@ class LoginTouchVC: BaseViewController, UITextFieldDelegate {
                 //                } else if (!(Auth.auth().currentUser?.displayName != nil)) {
                 //
                 //                }
-            else{
+                else{
 
-                self.getVerifyIDToken()
+                    self.getVerifyIDToken()
 
-                let memberId = Auth.auth().currentUser?.uid
-                let idToken = UserDefaults.standard.string(forKey: "idToken")
+                    let memberId = Auth.auth().currentUser?.uid
+                    let idToken = UserDefaults.standard.string(forKey: "idToken")
 
-                let parameter: CreateDeviceParameter = CreateDeviceParameter(memberId: memberId!, regToken: idToken!)
-                self.createDevice(createDeviceParameter: parameter)
+                    let parameter: CreateDeviceParameter = CreateDeviceParameter(memberId: memberId!, regToken: idToken!)
+                    self.createDevice(createDeviceParameter: parameter)
 
-                print("\(Auth.auth().currentUser?.displayName)")
-                let users = Auth.auth().currentUser?.displayName
-                let prefs: UserDefaults = UserDefaults.standard
-                prefs.set(users, forKey: "users")
-                prefs.set(self.password.text!, forKey: "password")
-                prefs.set(self.email.text!, forKey: "email")
+                    print("\(Auth.auth().currentUser?.displayName)")
+                    let users = Auth.auth().currentUser?.displayName
+                    let prefs: UserDefaults = UserDefaults.standard
+                    prefs.set(users, forKey: "users")
+                    prefs.set(self.password.text!, forKey: "password")
+                    prefs.set(self.email.text!, forKey: "email")
 
+                }
+                // ...
             }
-            // ...
         }
-
     }
 
     func getCurrentAppVersion() {
@@ -441,7 +460,7 @@ class LoginTouchVC: BaseViewController, UITextFieldDelegate {
         switch result.result {
         case .success(let response):
             print(response)
-            versioningCheck(apiVersion: response.iosCurrentVersion, forceUpdate: response.forcedUpdate, updateMessage: response.forcedUpdateMessage, loginButton: loginButtonCheck)
+            versioningCheck(apiVersion: response.iosCurrentVersion, forceUpdate: response.forcedUpdate, updateMessage: response.forcedUpdateMessage, loginButtonStatus: loginButtonCheck)
             break
         case .failure( _):
             if result.response?.statusCode == 400 {

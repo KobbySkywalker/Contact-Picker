@@ -9,7 +9,7 @@
 import Foundation
 
 class GetGroupCampaignsResponse: Codable {
-    var campaignId: String
+    var campaignId: String?
     var groupId: MemberGroupIdResponse
     var campaignName: String
     var campaignType: String

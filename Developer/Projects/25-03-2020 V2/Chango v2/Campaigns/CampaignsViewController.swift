@@ -569,7 +569,7 @@ class CampaignsViewController: BaseViewController, UITableViewDelegate, UITableV
             let myCampaigns: GetGroupCampaignsResponse = self.filtered_groups[indexPath.row]
             
             vc.campaignName = myCampaigns.campaignName
-            vc.campaignId = myCampaigns.campaignId
+            vc.campaignId = myCampaigns.campaignId ?? ""
             vc.campaignStatus = myCampaigns.status!
             vc.campaignType = myCampaigns.campaignType
             vc.isAdmin = adminResponse
@@ -632,7 +632,7 @@ class CampaignsViewController: BaseViewController, UITableViewDelegate, UITableV
             if adminResponse == "true" {
                 FTIndicator.showProgress(withMessage: "loading", userInteractionEnable: false)
 
-                let par: CampaignContributionParameter = CampaignContributionParameter(campaignId: myCampaigns.campaignId)
+                let par: CampaignContributionParameter = CampaignContributionParameter(campaignId: myCampaigns.campaignId ?? "")
                 self.getCampaignContribution(campaignContributionParameter: par, campaignData: myCampaigns)
                 print("id: \(myCampaigns.campaignId)")
             }else {
@@ -647,7 +647,7 @@ class CampaignsViewController: BaseViewController, UITableViewDelegate, UITableV
                 }else {
                     FTIndicator.showProgress(withMessage: "loading", userInteractionEnable: false)
 
-            let par: CampaignContributionParameter = CampaignContributionParameter(campaignId: myCampaigns.campaignId)
+                    let par: CampaignContributionParameter = CampaignContributionParameter(campaignId: myCampaigns.campaignId ?? "")
             self.getCampaignContribution(campaignContributionParameter: par, campaignData: myCampaigns)
             print("id: \(myCampaigns.campaignId)")
                     }
@@ -673,7 +673,7 @@ class CampaignsViewController: BaseViewController, UITableViewDelegate, UITableV
                 if adminResponse == "true" {
                     FTIndicator.showProgress(withMessage: "loading", userInteractionEnable: false)
 
-                    let par: CampaignContributionParameter = CampaignContributionParameter(campaignId: myExpiredCampaigns.campaignId)
+                    let par: CampaignContributionParameter = CampaignContributionParameter(campaignId: myExpiredCampaigns.campaignId ?? "")
                     self.getCampaignContribution(campaignContributionParameter: par, campaignData: myExpiredCampaigns)
                     print("id: \(myExpiredCampaigns.campaignId)")
                 }else {
@@ -688,7 +688,7 @@ class CampaignsViewController: BaseViewController, UITableViewDelegate, UITableV
                     }else {
                         FTIndicator.showProgress(withMessage: "loading", userInteractionEnable: false)
 
-                let par: CampaignContributionParameter = CampaignContributionParameter(campaignId: myExpiredCampaigns.campaignId)
+                        let par: CampaignContributionParameter = CampaignContributionParameter(campaignId: myExpiredCampaigns.campaignId ?? "")
                 self.getCampaignContribution(campaignContributionParameter: par, campaignData: myExpiredCampaigns)
                 print("id: \(myExpiredCampaigns.campaignId)")
                         }

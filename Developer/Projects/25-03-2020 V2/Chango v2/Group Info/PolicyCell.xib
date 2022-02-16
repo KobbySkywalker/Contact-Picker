@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,8 +25,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="106"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cashout Policy: 23%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nf4-yF-wOZ">
-                        <rect key="frame" x="7" y="7" width="297" height="19.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cashout Policy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nf4-yF-wOZ">
+                        <rect key="frame" x="7" y="7" width="282" height="19.5"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="19.5" id="hc9-4y-TNH"/>
                         </constraints>
@@ -44,22 +44,36 @@
                         <color key="textColor" red="0.44705882349999998" green="0.44705882349999998" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="editicon" translatesAutoresizingMaskIntoConstraints="NO" id="YgL-2b-jK6">
+                        <rect key="frame" x="292" y="7" width="21" height="19.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19.5" id="5cz-gs-u9n"/>
+                            <constraint firstAttribute="width" constant="21" id="M1I-vy-3sl"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="nf4-yF-wOZ" firstAttribute="top" secondItem="YgL-2b-jK6" secondAttribute="top" id="1CV-8T-vB1"/>
                     <constraint firstItem="nf4-yF-wOZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="85n-pM-Rt5"/>
+                    <constraint firstItem="nf4-yF-wOZ" firstAttribute="bottom" secondItem="YgL-2b-jK6" secondAttribute="bottom" id="8HO-Lr-w9d"/>
                     <constraint firstAttribute="trailing" secondItem="NBK-hU-Nrh" secondAttribute="trailing" constant="7" id="FkC-Jd-ZGv"/>
                     <constraint firstItem="nf4-yF-wOZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="7" id="IdH-wz-SFK"/>
+                    <constraint firstItem="YgL-2b-jK6" firstAttribute="leading" secondItem="nf4-yF-wOZ" secondAttribute="trailing" constant="3" id="dyA-iM-igE"/>
                     <constraint firstItem="NBK-hU-Nrh" firstAttribute="top" secondItem="nf4-yF-wOZ" secondAttribute="bottom" constant="7.5" id="jFZ-t3-XEB"/>
-                    <constraint firstAttribute="trailing" secondItem="nf4-yF-wOZ" secondAttribute="trailing" constant="16" id="m6X-wx-c9b"/>
+                    <constraint firstAttribute="trailing" secondItem="YgL-2b-jK6" secondAttribute="trailing" constant="7" id="meQ-fK-a12"/>
                     <constraint firstItem="NBK-hU-Nrh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="7" id="pS0-jy-1g3"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="editPolicyView" destination="YgL-2b-jK6" id="u7D-Zh-XNj"/>
                 <outlet property="policyName" destination="nf4-yF-wOZ" id="1xB-Ju-QhB"/>
                 <outlet property="policyStatement" destination="NBK-hU-Nrh" id="OqI-gb-fhS"/>
             </connections>
             <point key="canvasLocation" x="127.53623188405798" y="100.44642857142857"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="editicon" width="20" height="20"/>
+    </resources>
 </document>

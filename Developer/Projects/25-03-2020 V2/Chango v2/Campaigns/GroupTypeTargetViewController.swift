@@ -167,7 +167,7 @@ class GroupTypeTargetViewController: BaseViewController {
             print(self.endDate)
             print(campaignName)
             print(group)
-            let parameter: CreateCampaignParameter = CreateCampaignParameter(amountReceived: "0",campaignId: "0", campaignName: campaignName, description: campaignDescription, campaignType: campType, end: self.endDate, groupId: group, start: "0", target: campaignTarget.text!)
+            let parameter: CreateCampaignParameter = CreateCampaignParameter(amountReceived: "0",campaignId: "", campaignName: campaignName, description: campaignDescription, campaignType: campType, end: self.endDate, groupId: group, start: "0", target: campaignTarget.text!)
             print(campType)
             print(self.endDate)
             print(campaignName)
@@ -182,12 +182,12 @@ class GroupTypeTargetViewController: BaseViewController {
         }
     }
     
-    private func parseCreateCampaignResponse(result: DataResponse<GetGroupCampaignsResponse, AFError>){
+    private func parseCreateCampaignResponse(result: DataResponse<CreateGroupCampaignResponse, AFError>){
         FTIndicator.dismissProgress()
         switch result.result {
         case .success(let response):
             print("response: \(response)")
-            let alert = UIAlertController(title: "Chango", message: "Campaign created successfully.", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Chango", message: response.responseMessage, preferredStyle: .alert)
             
             let okAction = UIAlertAction(title: "OK", style: .default) { (action: UIAlertAction!) in
                 

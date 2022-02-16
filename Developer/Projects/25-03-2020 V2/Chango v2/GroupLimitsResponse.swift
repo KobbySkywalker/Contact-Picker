@@ -203,6 +203,7 @@ struct GroupPolicyResponse: Codable {
     var loan: String?
     var makeAdmin: String?
     var cashout: String?
+    var cashoutPercentage: String?
 }
 
 public struct UpdatePrivateGroupImageResponse: Codable {

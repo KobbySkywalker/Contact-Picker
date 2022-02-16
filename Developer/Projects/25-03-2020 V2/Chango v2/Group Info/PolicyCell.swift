@@ -12,9 +12,8 @@ class PolicyCell: UITableViewCell {
 
     @IBOutlet weak var policyName: UILabel!
     @IBOutlet weak var policyStatement: UILabel!
-    
-    
-    
+    @IBOutlet weak var editPolicyView: UIImageView!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

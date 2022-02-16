@@ -172,7 +172,7 @@ class InitiateCashoutTableViewController: BaseTableViewController, UITextFieldDe
         
         for item in campaignNames {
             self.campaignName.append(item.campaignName)
-            self.campaignId.append(item.campaignId)
+            self.campaignId.append(item.campaignId ?? "")
             self.campaignStatus.append(item.status!)
             self.campaignBal.append(item.amountReceived!)
             print("campaign names: \(campaignName)")

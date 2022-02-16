@@ -674,12 +674,12 @@ class AllGroupsViewController: BaseViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (tableView == privateGroupsTableView) {
-                let privateGroup: GroupResponse = self.privateGroups[indexPath.row]
+            let privateGroup: GroupResponse = self.privateGroups[indexPath.row]
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let controller: PrivateGroupDashboardVC = storyboard.instantiateViewController(withIdentifier: "privatedashboard") as! PrivateGroupDashboardVC
             if (searched) {
                 let group = filtered_private[indexPath.row]
-
+                
                 controller.privateGroup = group
                 controller.groupName = group.groupName
                 controller.campaignId = group.defaultCampaignId ?? ""
@@ -703,7 +703,7 @@ class AllGroupsViewController: BaseViewController, UITableViewDelegate, UITableV
         }else if (tableView == allPublicGroupsTableView)  {
             let allPubGroups: GroupResponse = self.allPublicGroups[indexPath.row]
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let controller: PublicCampaignsViewController = storyboard.instantiateViewController(withIdentifier: "publiccampaigns") as! PublicCampaignsViewController
+            //            let controller: PublicCampaignsViewController = storyboard.instantiateViewController(withIdentifier: "publiccampaigns") as! PublicCampaignsViewController
             let controller: PublicGroupDashboardVC = storyboard.instantiateViewController(withIdentifier: "publicdash") as! PublicGroupDashboardVC
             if (searched) {
                 let group = filtered_public[indexPath.row]
@@ -714,27 +714,23 @@ class AllGroupsViewController: BaseViewController, UITableViewDelegate, UITableV
                 controller.modalPresentationStyle = .fullScreen
                 self.navigationController?.pushViewController(controller, animated: true)
             }
-
+            
         }else {
             //All Groups
             let myGroup: GroupResponse = self.allGroups[indexPath.row]
-            if (myGroup.groupType == "public"){
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//                let controller: PublicCampaignsViewController = storyboard.instantiateViewController(withIdentifier: "publiccampaigns") as! PublicCampaignsViewController
-                let controller: PublicGroupDashboardVC = storyboard.instantiateViewController(withIdentifier: "publicdash") as! PublicGroupDashboardVC
-                if (searched) {
-                    let group = filtered_groups[indexPath.row]
+            //            if (myGroup.groupType == "public") {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            //                let controller: PublicCampaignsViewController = storyboard.instantiateViewController(withIdentifier: "publiccampaigns") as! PublicCampaignsViewController
+            let controller: PublicGroupDashboardVC = storyboard.instantiateViewController(withIdentifier: "publicdash") as! PublicGroupDashboardVC
+            if (searched) {
+                print("general")
+                let group = filtered_groups[indexPath.row]
+                if group.groupType == "public"{
+                    print("pubic search")
                     controller.publicGroup = group
                     self.navigationController?.pushViewController(controller, animated: true)
                 }else {
-                    let group = allGroups[indexPath.row]
-                    controller.publicGroup = group
-                    self.navigationController?.pushViewController(controller, animated: true)
-                }
-            }else {
-                if (searched) {
-                    print("searched here 8")
-                    let group = filtered_groups[indexPath.row]
+                    print("private search")
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     
                     let controller: PrivateGroupDashboardVC = storyboard.instantiateViewController(withIdentifier: "privatedashboard") as! PrivateGroupDashboardVC
@@ -746,7 +742,13 @@ class AllGroupsViewController: BaseViewController, UITableViewDelegate, UITableV
                     controller.allGroupsController = self
                     controller.modalPresentationStyle = .fullScreen
                     self.navigationController?.pushViewController(controller, animated: true)
-                    return
+                }
+                
+            }else {
+                let group = allGroups[indexPath.row]
+                if group.groupType == "public" {
+                    controller.publicGroup = group
+                    self.navigationController?.pushViewController(controller, animated: true)
                 }else {
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     let controller: PrivateGroupDashboardVC = storyboard.instantiateViewController(withIdentifier: "privatedashboard") as! PrivateGroupDashboardVC
@@ -759,6 +761,7 @@ class AllGroupsViewController: BaseViewController, UITableViewDelegate, UITableV
                     controller.modalPresentationStyle = .fullScreen
                     self.navigationController?.pushViewController(controller, animated: true)
                 }
+                
             }
         }
     }

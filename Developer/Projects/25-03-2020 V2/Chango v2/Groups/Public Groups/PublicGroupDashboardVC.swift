@@ -302,7 +302,7 @@ class PublicGroupDashboardVC: BaseViewController, UITableViewDelegate, UITableVi
                 
                 vc.targetAmount = myCampaigns.target!
                 vc.publicGroupDescriptionLabel = publicGroup.description!
-                vc.campaignId = myCampaigns.campaignId
+                vc.campaignId = myCampaigns.campaignId ?? ""
                 vc.groupId = publicGroup.groupId
                 vc.campaignName = myCampaigns.campaignName
                 vc.publicGroup = publicGroup
@@ -348,9 +348,9 @@ class PublicGroupDashboardVC: BaseViewController, UITableViewDelegate, UITableVi
 
                 }
                 print("resp: \(campaigns)")
-                campaignId = item.campaignId
+                campaignId = item.campaignId ?? ""
                 self.campaignNames.append(item.campaignName)
-                self.campaignIds.append(item.campaignId)
+                self.campaignIds.append(item.campaignId ?? "")
 
             }
             

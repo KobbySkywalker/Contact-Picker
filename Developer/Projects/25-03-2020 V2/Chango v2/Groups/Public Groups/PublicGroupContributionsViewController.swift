@@ -196,10 +196,10 @@ class PublicGroupContributionsViewController: BaseViewController, UITableViewDel
         
         if (tableView == campaignsTableView){
         let myCampaigns: GetGroupCampaignsResponse = self.campaigns[indexPath.row]
-        let parameter: CampaignContributionsParameter = CampaignContributionsParameter(campaignId: myCampaigns.campaignId, offset: "0", pageSize: "50")
+            let parameter: CampaignContributionsParameter = CampaignContributionsParameter(campaignId: myCampaigns.campaignId ?? "", offset: "0", pageSize: "50")
         print("id: \(myCampaigns.campaignId), \(myCampaigns.campaignName)")
         
-        campaignId = myCampaigns.campaignId
+            campaignId = myCampaigns.campaignId ?? ""
         campaignName = myCampaigns.campaignName
         self.getcampaignContributions(campaignContributionsParameter: parameter)
         }
@@ -261,7 +261,7 @@ class PublicGroupContributionsViewController: BaseViewController, UITableViewDel
             for item in response {
                 self.campaigns.append(item)
                 print("resp: \(campaigns)")
-                campaignId = item.campaignId
+                campaignId = item.campaignId ?? ""
 //                self.campaignNames.append(item.campaignName)
 //                self.campaignIds.append(item.campaignId)
                 

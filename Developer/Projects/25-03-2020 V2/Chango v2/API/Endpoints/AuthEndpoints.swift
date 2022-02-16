@@ -137,6 +137,7 @@ enum AuthRouter : APIConfiguration {
     case getAppCurrentVersion()
     case memberKycStatus(parameter: MemberKycCompleteParameter)
     case registerUser(parameter: RegisterParameter)
+    case initiateCashoutPolicyChange(parameter: CashoutPolicyChangeParameter)
     
 	internal var method: HTTPMethod {
 		switch self {
@@ -392,6 +393,8 @@ enum AuthRouter : APIConfiguration {
             return .get
         case .registerUser:
             return .post
+        case .initiateCashoutPolicyChange:
+            return .post
 		}
 	}
 	
@@ -416,12 +419,16 @@ enum AuthRouter : APIConfiguration {
             return NetworkingConstants.memberExists
         case .joinGroup:
             return NetworkingConstants.joinGroup
+//            return "https://apiv2uat.changoglobal.com/api/group/group/private/join"
         case .joinPrivateGroup:
             return NetworkingConstants.joinPrivateGroup
+//            return "https://apiv2uat.changoglobal.com/api/group/private/joinGroup"
         case .addMember:
             return NetworkingConstants.addMember
+//            return "https://apiv2uat.changoglobal.com/api/group/private/member/add"
         case .addMembersToGroup:
             return NetworkingConstants.addMembersToGroup
+//            return "https://apiv2uat.changoglobal.com/api/group/private/member/add"
         case .getMembers:
             return NetworkingConstants.getMembers
         case .createAdmin:
@@ -650,6 +657,8 @@ enum AuthRouter : APIConfiguration {
             return NetworkingConstants.memberKycStatus
         case .registerUser:
             return NetworkingConstants.registerUser
+        case .initiateCashoutPolicyChange:
+            return NetworkingConstants.initiateCashoutPolicyChange
 		}
 	}
     
@@ -1894,6 +1903,17 @@ enum AuthRouter : APIConfiguration {
                 print("Couldn't parse parameter")
             }
             return param
+
+        case .initiateCashoutPolicyChange(let parameter):
+            var param: [String:Any] = [:]
+            do{
+                let param1 = try DictionaryEncoder().encode(parameter)
+                print("Param1: \(param1)")
+                param = param1 as! [String : Any]
+            }catch {
+                print("Couldn't parse parameter")
+            }
+            return param
         }
     }
 	
@@ -2629,6 +2649,17 @@ enum AuthRouter : APIConfiguration {
                 print("Couldn't parse parameter")
             }
             return param
+
+        case .initiateCashoutPolicyChange(let parameter):
+            var param: [String:Any] = [:]
+            do{
+                let param1 = try DictionaryEncoder().encode(parameter)
+                print("Param1: \(param1)")
+                param = param1 as! [String : Any]
+            }catch {
+                print("Couldn't parse parameter")
+            }
+            return param
             
             default:
                 return [:]
@@ -2646,11 +2677,7 @@ enum AuthRouter : APIConfiguration {
 	
 	internal var headers: HTTPHeaders {
 		switch self {
-        case .getNetworkCode, .appConfiguration, .checkEmailAddress:
-            return ["Content-Type":"application/json"]
-        case .deleteDevice:
-            return ["Content-Type":"application/json"]
-        case .retrieveCountryChannelDestinations:
+        case .getNetworkCode, .appConfiguration, .checkEmailAddress, .deleteDevice, .retrieveCountryChannelDestinations:
             return ["Content-Type":"application/json"]
 		default:
             let api_token = UserDefaults.standard.string(forKey: "idToken")
@@ -2664,7 +2691,13 @@ enum AuthRouter : APIConfiguration {
 	
 	
     func asURLRequest() throws -> URLRequest {
-        var urlComponents = URLComponents(string: NetworkingConstants.baseUrl + path)!
+        var urlComponents: URLComponents
+//        switch self {
+//        case .addMembersToGroup, .joinPrivateGroup:
+//            urlComponents = URLComponents(string: path)!
+//        default:
+            urlComponents = URLComponents(string: NetworkingConstants.baseUrl + path)!
+//        }
         var queryItems:[URLQueryItem] = []
         for item in parameters {
             queryItems.append(URLQueryItem(name: item.key, value: "\(item.value)"))
@@ -3432,4 +3465,9 @@ struct RegisterParameter: Codable {
     var language: String
     var registrationToken: String
     var userIconPath: String
+}
+
+struct CashoutPolicyChangeParameter: Codable {
+    var ballotDetail: BallotDetail
+    var groupId: String
 }

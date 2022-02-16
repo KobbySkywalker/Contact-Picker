@@ -132,7 +132,7 @@ class CampaignOptionsViewController: BaseViewController, UITableViewDelegate, UI
         
         let vc: WalletsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "wallets") as! WalletsVC
                 
-        vc.campaignId = campaignInfo.campaignId
+        vc.campaignId = campaignInfo.campaignId ?? ""
 //        vc.voteId = cashoutVoteId
 //        vc.network = network
         vc.groupNamed = campaignInfo.campaignName
@@ -149,7 +149,7 @@ class CampaignOptionsViewController: BaseViewController, UITableViewDelegate, UI
             vc.groupName = campaignName
             vc.statementType = "MEMBER"
             vc.campaignStatement = true
-            vc.campaignId = campaignInfo.campaignId
+        vc.campaignId = campaignInfo.campaignId ?? ""
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

@@ -637,48 +637,48 @@ class GroupInfoVC: BaseViewController, UIImagePickerControllerDelegate, UIAction
     
     
     //GROUP POLICIES
-    func groupPolicies(groupPolicies: GroupPoliciesParameter) {
-        AuthNetworkManager.getGroupPolicies(parameter: groupPolicies) { (result) in
-            self.parseGetGroupResponse(result: result)
-        }
-    }
+//    func groupPolicies(groupPolicies: GroupPoliciesParameter) {
+//        AuthNetworkManager.getGroupPolicies(parameter: groupPolicies) { (result) in
+//            self.parseGetGroupResponse(result: result)
+//        }
+//    }
     
     
-    private func parseGetGroupResponse(result: DataResponse<GroupPoliciesResponse, AFError>){
-        FTIndicator.dismissProgress()
-        switch result.result {
-        case .success(let response):
-            print(response.makeadmin)
-            
-            let vc: GroupPolicyVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "policy") as! GroupPolicyVC
-            
-            vc.groupPolicies = [response]
-            vc.groupIconPath = groupIconPath
-            vc.creatorInfo = creatorInfo
-            vc.groupName = groupName
-            
-            self.navigationController?.pushViewController(vc, animated: true)
-            
-            break
-        case .failure(_ ):
-            
-            if result.response?.statusCode == 400 {
-                
-                sessionTimeout()
-                
-            }else {
-                let alert = UIAlertController(title: "Chango", message: NetworkManager().getErrorMessage(response: result), preferredStyle: .alert)
-                
-                let okAction = UIAlertAction(title: "OK", style: .default) { (action: UIAlertAction!) in
-                    
-                }
-                
-                alert.addAction(okAction)
-                
-                self.present(alert, animated: true, completion: nil)
-            }
-        }
-    }
+//    private func parseGetGroupResponse(result: DataResponse<GroupPoliciesResponse, AFError>){
+//        FTIndicator.dismissProgress()
+//        switch result.result {
+//        case .success(let response):
+//            print(response.makeadmin)
+//
+//            let vc: GroupPolicyVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "policy") as! GroupPolicyVC
+//
+//            vc.groupPolicies = [response]
+//            vc.groupIconPath = groupIconPath
+//            vc.creatorInfo = creatorInfo
+//            vc.groupName = groupName
+//
+//            self.navigationController?.pushViewController(vc, animated: true)
+//
+//            break
+//        case .failure(_ ):
+//
+//            if result.response?.statusCode == 400 {
+//
+//                sessionTimeout()
+//
+//            }else {
+//                let alert = UIAlertController(title: "Chango", message: NetworkManager().getErrorMessage(response: result), preferredStyle: .alert)
+//
+//                let okAction = UIAlertAction(title: "OK", style: .default) { (action: UIAlertAction!) in
+//
+//                }
+//
+//                alert.addAction(okAction)
+//
+//                self.present(alert, animated: true, completion: nil)
+//            }
+//        }
+//    }
     
     
     //GROUP POLICIES
@@ -696,11 +696,12 @@ class GroupInfoVC: BaseViewController, UIImagePickerControllerDelegate, UIAction
             print(response.makeAdmin)
             
             let vc: GroupPolicyVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "policy") as! GroupPolicyVC
-            
+            vc.isAdmin = isAdmin
             vc.groupPolicy = [response]
             vc.groupIconPath = groupIconPath
             vc.creatorInfo = creatorInfo
             vc.groupName = groupName
+            vc.groupId = groupId
             
             self.navigationController?.pushViewController(vc, animated: true)
             

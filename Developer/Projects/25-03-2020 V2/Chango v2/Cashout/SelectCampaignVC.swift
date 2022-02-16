@@ -72,7 +72,7 @@ class SelectCampaignVC: BaseViewController, UITableViewDelegate, UITableViewData
         campaignStatus = []
         for item in campaignNameArray {
             self.campaignName.append(item.campaignName)
-            self.campaignId.append(item.campaignId)
+            self.campaignId.append(item.campaignId ?? "")
             self.campaignStatus.append(item.status!)
             self.campaignBal.append(item.amountReceived!)
             print("campaign names: \(campaignName)")
@@ -175,7 +175,7 @@ class SelectCampaignVC: BaseViewController, UITableViewDelegate, UITableViewData
             let vc: WalletsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "wallets") as! WalletsVC
                 
             print("end: \(groups.end)")
-            vc.campaignId = groups.campaignId
+                vc.campaignId = groups.campaignId ?? ""
             vc.groupId = groupId
             vc.voteId = voteId
             vc.network = network
@@ -209,7 +209,7 @@ class SelectCampaignVC: BaseViewController, UITableViewDelegate, UITableViewData
 //            vc.groupName = privateGroup.groupName
 //            vc.currency = privateGroup.countryId.currency
             vc.campaignInfo = campaignDetails
-            vc.campaignId = groups.campaignId
+            vc.campaignId = groups.campaignId ?? ""
 //            vc.group = privateGroup.groupId
 //            vc.privateGroup = privateGroup
             vc.defaultContributions = defaultContributions
@@ -224,7 +224,7 @@ class SelectCampaignVC: BaseViewController, UITableViewDelegate, UITableViewData
 
         
         vc.groupId = groupId
-        vc.campaignId = groups.campaignId
+        vc.campaignId = groups.campaignId ?? ""
         vc.voteId = voteId
         vc.network = network
         vc.groupBalance = "\(campaignBalance)"

@@ -28,8 +28,11 @@ class GroupPolicyVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
     var groupIconPath: String = ""
     var creatorInfo: String = ""
     var groupName: String = ""
+    var isAdmin: String = ""
+    var cashoutPercentage: String = ""
+    var groupId: String = ""
 
-    var groupPolicies: [GroupPoliciesResponse] = []
+//    var groupPolicies: [GroupPoliciesResponse] = []
     var groupPolicy: [GroupPolicyResponse] = []
     
     override func viewDidLoad() {
@@ -71,6 +74,9 @@ class GroupPolicyVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
             if item.dropMember != nil {
                 dropMember = item.dropMember ?? ""
             }
+            if item.cashoutPercentage != nil {
+                cashoutPercentage = item.cashoutPercentage ?? ""
+            }
         }
         
         
@@ -78,20 +84,16 @@ class GroupPolicyVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
         groupNameLabel.text = groupName
         
         print("cashout: \(cashout)")
-        print("groupPolicies: \(groupPolicies)")
-        
+
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cell)
         self.tableView.register(UINib(nibName: "PolicyCell", bundle: nil), forCellReuseIdentifier: "PolicyCell")
         
         if (groupIconPath == "<null>") || (groupIconPath == ""){
             groupImage.image = UIImage(named: "defaultgroupicon")
-                    print(groupIconPath)
             groupImage.contentMode = .scaleAspectFit
-            
         }else {
             groupImage.contentMode = .scaleAspectFill
             Nuke.loadImage(with: URL(string: groupIconPath)!, into: groupImage)
-            
         }
         
     }
@@ -123,10 +125,26 @@ class GroupPolicyVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
         }else if indexPath.row == 2 {
             cell.policyName.text = "Cashout Policy"
             cell.policyStatement.text = "\(cashout)"
+            if isAdmin == "false" {
+                cell.editPolicyView.isHidden = true
+            }else {
+                cell.editPolicyView.isHidden = false
+                cell.editPolicyView.tappable = true
+                cell.editPolicyView.callback = {
+                    let vc: GroupSettingsViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "groupsettings") as! GroupSettingsViewController
+                    vc.cashoutPolicyEdit = true
+                    vc.cashoutPercentage = self.cashoutPercentage
+                    vc.groupName = self.groupName
+                    vc.groupId = self.groupId
+                    vc.groupProfile = self.groupIconPath
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
+                cell.editPolicyView.tag = indexPath.row
+            }
         }else if indexPath.row == 3 {
             if loan == "0" {
                 cell.policyName.text = "Borrowing Policy"
-            cell.policyStatement.text = "This group does not support borrowing."
+                cell.policyStatement.text = "This group does not support borrowing."
             }else {
                 cell.policyName.text = "Borrowing Policy"
                 cell.policyStatement.text = "\(loan)"
@@ -141,5 +159,4 @@ class GroupPolicyVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
         
         return cell
     }
-
 }

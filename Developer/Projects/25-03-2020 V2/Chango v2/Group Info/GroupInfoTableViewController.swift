@@ -486,8 +486,8 @@ class GroupInfoTableViewController: BaseTableViewController, UIImagePickerContro
             }else if indexPath.row == 2 {
                 FTIndicator.showProgress(withMessage: "loading group policies", userInteractionEnable: false)
 
-                let parameter: GroupPoliciesParameter = GroupPoliciesParameter(groupId: groupId)
-                self.groupPolicies(groupPolicies: parameter)
+//                let parameter: GroupPoliciesParameter = GroupPoliciesParameter(groupId: groupId)
+//                self.groupPolicies(groupPolicies: parameter)
             }else if indexPath.row == 3 {
                 //approved cashouts
 //                showAlert(title: "Approved Cashouts", message: "This feature is not available yet.")
@@ -585,45 +585,45 @@ class GroupInfoTableViewController: BaseTableViewController, UIImagePickerContro
     
     
     //GROUP POLICIES
-    func groupPolicies(groupPolicies: GroupPoliciesParameter) {
-        AuthNetworkManager.getGroupPolicies(parameter: groupPolicies) { (result) in
-            self.parseGetGroupResponse(result: result)
-        }
-    }
+//    func groupPolicies(groupPolicies: GroupPoliciesParameter) {
+//        AuthNetworkManager.getGroupPolicies(parameter: groupPolicies) { (result) in
+//            self.parseGetGroupResponse(result: result)
+//        }
+//    }
     
     
-    private func parseGetGroupResponse(result: DataResponse<GroupPoliciesResponse, AFError>){
-        FTIndicator.dismissProgress()
-        switch result.result {
-        case .success(let response):
-            print(response.makeadmin)
-            
-            let vc: GroupPolicyVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "policy") as! GroupPolicyVC
-            
-            vc.groupPolicies = [response]
-            
-            self.navigationController?.pushViewController(vc, animated: true)
-            
-            break
-        case .failure(let error):
-            
-            if result.response?.statusCode == 400 {
-                
-                baseTableSessionTimeout()
-                
-            }else {
-                let alert = UIAlertController(title: "Chango", message: NetworkManager().getErrorMessage(response: result), preferredStyle: .alert)
-                
-                let okAction = UIAlertAction(title: "OK", style: .default) { (action: UIAlertAction!) in
-                    
-                }
-                
-                alert.addAction(okAction)
-                
-                self.present(alert, animated: true, completion: nil)
-            }
-        }
-    }
+//    private func parseGetGroupResponse(result: DataResponse<GroupPoliciesResponse, AFError>){
+//        FTIndicator.dismissProgress()
+//        switch result.result {
+//        case .success(let response):
+//            print(response.makeadmin)
+//
+//            let vc: GroupPolicyVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "policy") as! GroupPolicyVC
+//
+//            vc.groupPolicies = [response]
+//
+//            self.navigationController?.pushViewController(vc, animated: true)
+//
+//            break
+//        case .failure(let error):
+//
+//            if result.response?.statusCode == 400 {
+//
+//                baseTableSessionTimeout()
+//
+//            }else {
+//                let alert = UIAlertController(title: "Chango", message: NetworkManager().getErrorMessage(response: result), preferredStyle: .alert)
+//
+//                let okAction = UIAlertAction(title: "OK", style: .default) { (action: UIAlertAction!) in
+//
+//                }
+//
+//                alert.addAction(okAction)
+//
+//                self.present(alert, animated: true, completion: nil)
+//            }
+//        }
+//    }
     
     
     func getGroupActivity(groupActivity: GroupActivityParameter) {

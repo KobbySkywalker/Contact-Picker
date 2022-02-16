@@ -43,7 +43,7 @@ struct NetworkingConstants{
     static let leaveGroup = "group/private/leave"
     static let campaignContributions = "group/campaign/contributions"
     static let castVote = "castVote"
-    static let createCampaign = "campaign/create"
+    static let createCampaign = "campaign/createCampaign"
     static let getGroupCampaign = "campaign/"
     static let contribute = "contribute"
     static let makeContribution = "makeContribution"
@@ -136,6 +136,7 @@ struct NetworkingConstants{
     static let getCampaignStatement = "group/campaign/statement"
     static let getAppCurrentVersion = "version/getAppCurrentVersion"
     static let memberKycStatus = "member/member-kyc-complete"
+    static let initiateCashoutPolicyChange = "initiate-cashout-policy-change"
     
     func getVoteSummary(_ groupId: String) -> String {
 

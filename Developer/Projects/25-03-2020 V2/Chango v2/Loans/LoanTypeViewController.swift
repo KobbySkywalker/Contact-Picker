@@ -74,7 +74,7 @@ class LoanTypeViewController: BaseViewController {
         for i in 0 ..< campaignNames.count {
 //            self.campaignId.append(item.campaignId[0])
             campaignName = campaignNames[0].campaignName
-            campaignIdd = campaignNames[0].campaignId
+            campaignIdd = campaignNames[0].campaignId ?? ""
             status = campaignNames[0].status!
             for item in campaignBalances {
                 if item.campaignId == campaignIdd {
@@ -137,7 +137,7 @@ class LoanTypeViewController: BaseViewController {
         
         for item in campaignNames {
             self.campaigns.append(item.campaignName)
-            self.campaignId.append(item.campaignId)
+            self.campaignId.append(item.campaignId ?? "")
             self.campaignStatus.append(item.status!)
             print("id: \(campaignId)")
         }
@@ -315,7 +315,7 @@ class LoanTypeViewController: BaseViewController {
             for item in campaignNames {
                 actionSheetController.addAction(title: item.campaignName, style: .default, handler: {(action) in
                     self.campaignName = item.campaignName
-                    self.campaignIdd = item.campaignId
+                    self.campaignIdd = item.campaignId ?? ""
                     self.campaignDropDown.setTitle(item.campaignName, for: .normal)
                     for item in self.campaignBalances {
                         if item.campaignId == self.campaignIdd {
@@ -333,7 +333,7 @@ class LoanTypeViewController: BaseViewController {
             for item in campaignNames {
                 alert.addAction(title: item.campaignName, style: .default, handler: {(action) in
                     self.campaignName = item.campaignName
-                    self.campaignIdd = item.campaignId
+                    self.campaignIdd = item.campaignId ?? ""
                     self.campaignDropDown.setTitle(item.campaignName, for: .normal)
                     for item in self.campaignBalances {
                         if item.campaignId == self.campaignIdd {
