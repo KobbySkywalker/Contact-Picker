@@ -127,8 +127,8 @@ class ContributeAndShareCampaignVC: BaseViewController {
 //        let secondActivityItem : NSURL = NSURL(string: "https://campaignsuat.changoapp.com/\(alias)")! //uat
 ////        let secondActivityItem : NSURL = NSURL(string: "https://campaignsuat.changoapp.com/\(alias)")! //live
         
-//        let baseUrl: String = "https://donate-uat.changoapp.com/campaign/" // uat
-        let baseUrl: String = "https://donate.changoapp.com/campaign/" // live
+        let baseUrl: String = "https://donate-uat.changoapp.com/campaign/" // uat
+//        let baseUrl: String = "https://donate.changoapp.com/campaign/" // live
 
 //        "https://campaigns.changoapp.com/" //live -- chango web display
 //        let baseUrl: String = "https://campaignsuat.changoapp.com/" //uat

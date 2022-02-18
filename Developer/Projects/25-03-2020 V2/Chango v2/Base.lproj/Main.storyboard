@@ -6609,10 +6609,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LCv-qo-Y5N" customClass="ACFloatingTextfield" customModule="Chango_v2" customModuleProvider="target">
-                                <rect key="frame" x="43.5" y="367" width="288" height="41"/>
+                                <rect key="frame" x="106" y="367" width="226" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="1sP-SY-Txg"/>
-                                    <constraint firstAttribute="width" constant="288" id="PNl-ob-ip0"/>
+                                    <constraint firstAttribute="width" constant="226" id="PNl-ob-ip0"/>
                                 </constraints>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Sora-Regular" family="Sora" pointSize="15"/>
@@ -6633,6 +6633,25 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GH" translatesAutoresizingMaskIntoConstraints="NO" id="QhW-oh-fFD">
+                                <rect key="frame" x="43.5" y="375" width="36" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="SLc-rj-w3k"/>
+                                    <constraint firstAttribute="width" constant="36" id="dVc-ai-xby"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sV7-9e-g1S">
+                                <rect key="frame" x="84" y="375.5" width="14" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="6Bd-3k-DmX"/>
+                                    <constraint firstAttribute="width" constant="14" id="AAg-6c-mvG"/>
+                                </constraints>
+                                <state key="normal" image="dropdownicon"/>
+                                <connections>
+                                    <action selector="dropDownButtonAction:" destination="ufn-gr-aXB" eventType="touchUpInside" id="HEv-qu-Ign"/>
+                                    <action selector="dropDownPicker:" destination="fd4-WH-JHu" eventType="touchUpInside" id="b41-Uo-qMt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rsH-rW-SxV"/>
                         <color key="backgroundColor" red="0.019607843140000001" green="0.25098039220000001" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -6641,9 +6660,11 @@
                             <constraint firstItem="ful-CT-IaA" firstAttribute="leading" secondItem="SDz-G6-MAg" secondAttribute="leading" id="1Uv-ey-HGd"/>
                             <constraint firstItem="zA3-ju-0aD" firstAttribute="centerX" secondItem="hFV-k8-RLk" secondAttribute="centerX" id="1YW-2K-npP"/>
                             <constraint firstItem="zA3-ju-0aD" firstAttribute="top" secondItem="pcK-vj-vpP" secondAttribute="bottom" constant="21" id="22W-up-QAQ"/>
-                            <constraint firstItem="hFV-k8-RLk" firstAttribute="leading" secondItem="LCv-qo-Y5N" secondAttribute="leading" id="2Yn-Zu-gIc"/>
+                            <constraint firstItem="hFV-k8-RLk" firstAttribute="leading" secondItem="LCv-qo-Y5N" secondAttribute="leading" constant="-62.5" id="2Yn-Zu-gIc"/>
                             <constraint firstItem="zA3-ju-0aD" firstAttribute="leading" secondItem="rsH-rW-SxV" secondAttribute="leading" id="3Bz-Sm-Ugb"/>
                             <constraint firstItem="zA3-ju-0aD" firstAttribute="centerX" secondItem="WlT-Y6-zhb" secondAttribute="centerX" id="599-Jf-Wzi"/>
+                            <constraint firstItem="sV7-9e-g1S" firstAttribute="top" secondItem="ful-CT-IaA" secondAttribute="bottom" constant="83.5" id="5sr-kG-nx7"/>
+                            <constraint firstItem="QhW-oh-fFD" firstAttribute="top" secondItem="ful-CT-IaA" secondAttribute="bottom" constant="83" id="89C-Hm-BZ4"/>
                             <constraint firstItem="W9P-cy-Kbu" firstAttribute="leading" secondItem="CEb-Vf-j3x" secondAttribute="trailing" constant="86.5" id="8qB-3Q-3AL"/>
                             <constraint firstItem="LCv-qo-Y5N" firstAttribute="top" secondItem="ful-CT-IaA" secondAttribute="bottom" constant="75" id="91g-ru-8qs"/>
                             <constraint firstItem="pcK-vj-vpP" firstAttribute="top" secondItem="CEb-Vf-j3x" secondAttribute="bottom" constant="73" id="9Np-W1-re3"/>
@@ -6651,16 +6672,22 @@
                             <constraint firstItem="pcK-vj-vpP" firstAttribute="leading" secondItem="hFV-k8-RLk" secondAttribute="leading" id="BI9-jF-crv"/>
                             <constraint firstItem="zA3-ju-0aD" firstAttribute="trailing" secondItem="rsH-rW-SxV" secondAttribute="trailing" id="GeJ-F3-5ps"/>
                             <constraint firstItem="CEb-Vf-j3x" firstAttribute="leading" secondItem="rsH-rW-SxV" secondAttribute="leading" constant="35" id="JtL-BK-nMq"/>
+                            <constraint firstItem="sV7-9e-g1S" firstAttribute="leading" secondItem="QhW-oh-fFD" secondAttribute="trailing" constant="4.5" id="La3-Jw-pGe"/>
+                            <constraint firstItem="QhW-oh-fFD" firstAttribute="centerY" secondItem="LCv-qo-Y5N" secondAttribute="centerY" id="Oiy-wx-lnJ"/>
                             <constraint firstItem="SDz-G6-MAg" firstAttribute="top" secondItem="pcK-vj-vpP" secondAttribute="bottom" constant="46" id="U8p-FL-AYd"/>
                             <constraint firstItem="hFV-k8-RLk" firstAttribute="top" secondItem="LCv-qo-Y5N" secondAttribute="bottom" constant="40" id="U9h-Fa-fJG"/>
                             <constraint firstAttribute="bottomMargin" secondItem="zA3-ju-0aD" secondAttribute="bottom" constant="-60" id="USX-gO-mEH"/>
                             <constraint firstItem="ful-CT-IaA" firstAttribute="top" secondItem="SDz-G6-MAg" secondAttribute="bottom" constant="1" id="aoH-xY-PKR"/>
                             <constraint firstItem="pcK-vj-vpP" firstAttribute="leading" secondItem="CEb-Vf-j3x" secondAttribute="leading" constant="8.5" id="mcG-aP-h5U"/>
-                            <constraint firstItem="LCv-qo-Y5N" firstAttribute="leading" secondItem="ful-CT-IaA" secondAttribute="leading" id="oo8-aK-Xpx"/>
+                            <constraint firstItem="LCv-qo-Y5N" firstAttribute="leading" secondItem="ful-CT-IaA" secondAttribute="leading" constant="62.5" id="oo8-aK-Xpx"/>
                             <constraint firstItem="W9P-cy-Kbu" firstAttribute="top" secondItem="WlT-Y6-zhb" secondAttribute="topMargin" constant="-41" id="sb8-yV-oBt"/>
+                            <constraint firstItem="QhW-oh-fFD" firstAttribute="leading" secondItem="ful-CT-IaA" secondAttribute="leading" id="vkg-ZX-hlc"/>
+                            <constraint firstItem="sV7-9e-g1S" firstAttribute="top" secondItem="QhW-oh-fFD" secondAttribute="bottom" constant="-24.5" id="yyq-gI-yff"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="countryFlag" destination="QhW-oh-fFD" id="rRF-VZ-0Ym"/>
+                        <outlet property="dropDownButton" destination="sV7-9e-g1S" id="ufO-2e-lLZ"/>
                         <outlet property="phoneNumberTextField" destination="LCv-qo-Y5N" id="UU9-aW-bAB"/>
                     </connections>
                 </viewController>
@@ -17489,7 +17516,7 @@
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 3" translatesAutoresizingMaskIntoConstraints="NO" id="tMN-DM-YC4">
-                                <rect key="frame" x="-2" y="179" width="375" height="552"/>
+                                <rect key="frame" x="-2" y="179" width="392" height="552"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verification Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FLS-3X-uZ4">
                                 <rect key="frame" x="32" y="375" width="98" height="25"/>
@@ -17580,7 +17607,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile Network" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NGg-KY-bXK">
-                                <rect key="frame" x="85" y="113" width="160" height="52"/>
+                                <rect key="frame" x="85" y="113" width="177" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="kFa-Zu-rdJ"/>
                                 </constraints>
@@ -17608,7 +17635,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verify Wallet" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Usy-tk-FfC">
-                                <rect key="frame" x="32" y="231" width="272" height="66"/>
+                                <rect key="frame" x="32" y="231" width="289" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="2tC-K6-S8z"/>
                                 </constraints>
@@ -21632,7 +21659,7 @@ Kindly note that the debited funds will be reversed back to your account within 
             <size key="intrinsicContentSize" width="101.5" height="19"/>
         </designable>
         <designable name="92N-qZ-yde">
-            <size key="intrinsicContentSize" width="79" height="32"/>
+            <size key="intrinsicContentSize" width="46" height="30"/>
         </designable>
         <designable name="96u-Lx-vzY">
             <size key="intrinsicContentSize" width="61" height="17"/>
@@ -21644,7 +21671,7 @@ Kindly note that the debited funds will be reversed back to your account within 
             <size key="intrinsicContentSize" width="113" height="16"/>
         </designable>
         <designable name="FQL-Wh-2bM">
-            <size key="intrinsicContentSize" width="35" height="32"/>
+            <size key="intrinsicContentSize" width="30" height="30"/>
         </designable>
         <designable name="KA5-1R-ly7">
             <size key="intrinsicContentSize" width="153.5" height="19"/>
@@ -21744,9 +21771,6 @@ Kindly note that the debited funds will be reversed back to your account within 
         </designable>
         <designable name="u25-cu-cRM">
             <size key="intrinsicContentSize" width="119" height="16"/>
-        </designable>
-        <designable name="uVp-oT-aDK">
-            <size key="intrinsicContentSize" width="103" height="21.5"/>
         </designable>
         <designable name="wIJ-tG-mo0">
             <size key="intrinsicContentSize" width="178.5" height="22.5"/>
